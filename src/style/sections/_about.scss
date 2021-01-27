@@ -49,6 +49,14 @@
 
       &-text {
         text-align: left;
+        a{
+          color: #fff;
+          text-decoration: underline;
+          transition: .5s;
+          &:hover{
+            text-decoration: dotted;
+          }
+        }
 
         @include respond(tab-port) {
           font-size: 1.5rem;

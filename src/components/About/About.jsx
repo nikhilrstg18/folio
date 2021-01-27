@@ -38,34 +38,41 @@ const About = () => {
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
-                  I'm a <strong>Full Stack Developer</strong>,{' '}
+                  I'm a <br />
+                  <a href="https://dotnet.microsoft.com/apps/aspnet">
+                    <strong>.Net Web Developer</strong> 
+                  </a><br/>( Web Apps | APIs | Real-Time | Microservices )
+                  <br />
                   <a href="http://badgecert.com/bc/html/profile.jsp?k=pwywzgg">
-                    <strong>Certified Scrum Master&reg;</strong>
-                  </a>{' '}
-                  and a{' '}
+                    <strong>Certified Scrum Master&reg;</strong> 
+                  </a>
+                  <br />
                   <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-12-02&ci=AWS01115186">
                     <strong>Certified AWS Solutions Architect - Associate&reg;</strong>
-                  </a>{' '}
+                  </a>
+                  <br />
                   living in New Delhi and moving around <strong>NCR, India</strong>.
                 </p>
                 <p className="about-wrapper__info-text">
                   I’m extremely passionate about web development and design in all it’s forms and
                   helping <strong>mid and large businesses</strong> and artisans build and improve
-                  their online presence. I spend my work days with my hands in many different areas
-                  of web development from back end programming (<strong>AWS</strong>,{' '}
-                  <strong>C# .Net</strong>, <strong>ASP.NET Core</strong>) to front-end engineering
-                  (<strong>HTML</strong>, <strong>CSS</strong>, <strong>Bootsrap</strong>,{' '}
-                  <strong>Javascript</strong>, <strong>Angular</strong> and <strong>ReactJS</strong>
-                  ), digital accessibility, user experience and visual design.
+                  their online presence, digital accessability.
+                </p>
+                <p className="about-wrapper__info-text">
+                  I spend my work days with my hands{' '}
+                  in many different areas of web development from <br /> back-end ({' '}
+                  <strong>C# .Net</strong> | <strong>ASP.NET Core</strong> ) to <br /> front-end
+                  ( <strong>HTML</strong> | <strong>CSS</strong> |{' '}
+                  <strong>JS</strong> | <strong>Angular</strong> | <strong>ReactJS</strong>{' '}
+                  ), to <br />cloud ( <strong>AWS</strong> | <strong>Azure</strong> )
                 </p>
                 <p className="about-wrapper__info-text">
                   Currently I work with{' '}
                   <a href="https://cygrp.com/">
                     <strong>Cyber Group</strong>
                   </a>
-                  . I am not looking for any full time position as of now but I am{' '}
-                  <strong>always open to ideas and projects</strong> that excite me. Aside from web
-                  development,I enjoy spending my time exploring new places and clicking photos.
+                  . I am not looking for any full time position as of now but I am {' '}
+                  <strong>always open to ideas and projects</strong> that excite me.
                 </p>
                 {resume && (
                   <span className="d-flex mt-3">
