@@ -7,7 +7,7 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
+  const { img, resume } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -38,40 +38,53 @@ const About = () => {
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
-                  I'm a <br />
-                  <a href="https://dotnet.microsoft.com/apps/aspnet">
-                    <strong>.Net Web Developer</strong> 
-                  </a><br/>( Web Apps | APIs | Real-Time | Microservices )
-                  <br />
-                  <a href="http://badgecert.com/bc/html/profile.jsp?k=pwywzgg">
-                    <strong>Certified Scrum Master&reg;</strong> 
-                  </a>
-                  <br />
-                  <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-12-02&ci=AWS01115186">
-                    <strong>Certified AWS Solutions Architect - Associate&reg;</strong>
-                  </a>
-                  <br />
+                  I&apos;m a
+                  <ul>
+                    <li>
+                      <a href="https://dotnet.microsoft.com/apps/aspnet">
+                        <strong>Web Developer </strong>
+                      </a>
+                      ( Web Apps | APIs | <strong>&micro;</strong>-services )
+                    </li>
+                    <li>
+                      <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-12-02&ci=AWS01115186">
+                        <strong>Certified AWS Solutions Architect - Associate&reg;</strong>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://badgecert.com/bc/html/profile.jsp?k=pwywzgg">
+                        <strong>Certified Scrum Master&reg;</strong>
+                      </a>
+                    </li>
+                  </ul>
                   living in New Delhi and moving around <strong>NCR, India</strong>.
                 </p>
                 <p className="about-wrapper__info-text">
-                  I’m extremely passionate about web development and design in all it’s forms and
-                  helping <strong>mid and large businesses</strong> and artisans build and improve
-                  their online presence, digital accessability.
+                  I&apos;m passionate about web development and design in all its forms and helping{' '}
+                  <strong>mid and large businesses</strong> and artisans build and improve their
+                  online presence, digital accessibility.
                 </p>
                 <p className="about-wrapper__info-text">
-                  I spend my work days with my hands{' '}
-                  in many different areas of web development from <br /> back-end ({' '}
-                  <strong>C# .Net</strong> | <strong>ASP.NET Core</strong> ) to <br /> front-end
-                  ( <strong>HTML</strong> | <strong>CSS</strong> |{' '}
-                  <strong>JS</strong> | <strong>Angular</strong> | <strong>ReactJS</strong>{' '}
-                  ), to <br />cloud ( <strong>AWS</strong> | <strong>Azure</strong> )
+                  I spend my workdays with my hands in many different areas of web development in
+                  <ul>
+                    <li>
+                      back-end ( <strong>C# .Net</strong> | <strong>ASP.NET Core</strong> )
+                    </li>
+                    <li>
+                      front-end ( <strong>HTML</strong> | <strong>CSS</strong> | <strong>JS</strong>{' '}
+                      | <strong>Angular</strong> | <strong>ReactJS</strong> )
+                    </li>
+                    <li>
+                      cloud ( <strong>AWS</strong> | <strong>Azure</strong> )
+                    </li>
+                  </ul>
                 </p>
                 <p className="about-wrapper__info-text">
-                  Currently I work with{' '}
+                  Currently, I work with{' '}
                   <a href="https://cygrp.com/">
                     <strong>Cyber Group</strong>
                   </a>
-                  . I am not looking for any full time position as of now but I am {' '}
+                  . I&apos;m not looking for any full-time position as of now but I&apos;m{' '}
                   <strong>always open to ideas and projects</strong> that excite me.
                 </p>
                 {resume && (
