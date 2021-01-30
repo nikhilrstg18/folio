@@ -84,7 +84,7 @@ const About = () => {
                   <a href="https://cygrp.com/">
                     <strong>Cyber Group</strong>
                   </a>
-                  . I&apos;m not looking for any full-time position as of now but I&apos;m{' '}
+                  . I&apos;m not looking for any full-time position as of now but I&apos;m{'  '}
                   <strong>always open to ideas and projects</strong> that excite me.
                 </p>
                 {resume && (
