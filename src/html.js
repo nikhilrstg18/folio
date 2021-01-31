@@ -19,6 +19,16 @@ export default function HTML({
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          async
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.6.3/css/v4-shims.css"
+          async
+        />
         {headComponents}
       </head>
       <body {...bodyAttributes}>
