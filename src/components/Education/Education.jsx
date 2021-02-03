@@ -1,10 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
-import { Chrono } from 'react-chrono';
+import SchoolIcon from '@material-ui/icons/School';
+import WorkIcon from '@material-ui/icons/Work';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import Title from '../Title/Title';
 import PortfolioContext from '../../context/context';
+import 'react-vertical-timeline-component/style.min.css';
 
 const Education = () => {
   const { education } = useContext(PortfolioContext);
@@ -27,27 +30,27 @@ const Education = () => {
     <section id="education">
       <Container>
         <Title title="Education" />
-        <Row className="education-wrapper">
-          <Col lg={12} md={12} sm={12}>
-            <div
-              style={{
-                width: '100%',
-                height: '70vh',
-                marginBottom: '1rem',
-              }}
-            >
-              <Chrono
-                items={education}
-                mode="VERTICAL_ALTERNATING"
-                theme={{
-                  primary: '#7F00FF',
-                  secondary: ' #fff',
-                  cardForeColor: '#333',
-                }}
-              />
-            </div>
-          </Col>
-        </Row>
+        <VerticalTimeline className="mb-4">
+          {education.length &&
+            education.map((item) => {
+              const { id, startDate, endDate, title, org, titleDesc, icon, bgColor } = item;
+              return (
+                <VerticalTimelineElement
+                  key={id}
+                  className="vertical-timeline-element--work"
+                  contentStyle={{ color: '#333' }}
+                  contentArrowStyle={{ borderRight: '7px solid #fFF' }}
+                  date={`${startDate} - ${endDate}`}
+                  iconStyle={{ background: bgColor, color: '#fff' }}
+                  icon={icon === 'work' ? <WorkIcon /> : <SchoolIcon />}
+                >
+                  <h3 className="vertical-timeline-element-title">{title}</h3>
+                  <h4 className="vertical-timeline-element-subtitle">{org}</h4>
+                  <p>{titleDesc}</p>
+                </VerticalTimelineElement>
+              );
+            })}
+        </VerticalTimeline>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <Link to="projects" smooth duration={1000}>
