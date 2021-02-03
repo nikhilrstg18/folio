@@ -28,7 +28,7 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'project.webp',
     title: 'Insights',
     info: 'Angular | Clarity Fx',
     info2: 'comming soon...',
@@ -88,41 +88,51 @@ export const githubButtons = {
   isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
 
+export const educationData = [
+  {
+    id: nanoid(),
+    title: '2008 - 2009',
+    cardTitle: 'A.I.S.C.E. | CBSE',
+    cardSubtitle: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
+    cardDetailedText: ['Aggregate Scored : 86%'],
+  },
+  {
+    id: nanoid(),
+    title: '2009 - 2011',
+    cardTitle: 'A.I.S.S.C.E. | CBSE',
+    cardSubtitle: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
+    cardDetailedText: ['Aggregate Scored : 73%'],
+  },
+  {
+    id: nanoid(),
+    title: '2012 - 2016',
+    cardTitle: 'B.Tech in ECE | AKTU ',
+    cardSubtitle: 'HRIT Group of Institutions, Ghaziabad, U.P.',
+    cardDetailedText: ['Aggregate Scored : 71.4%, 1st Division'],
+  },
+];
+
 export const skillsData = [
   {
     id: nanoid(),
-    name: 'Language',
+    name: 'UI',
     items: [
       {
-        altName: 'JavaScript',
-        iconClass: 'fab fa-js',
-        percent: '75',
+        altName: 'HTML/CSS',
+        iconClass: '',
+        logo: 'html-css.webp',
+        percent: '60',
         color: '#ffc107',
         itemId: nanoid(),
       },
       {
-        altName: 'C#',
+        altName: 'JavaScript/TypeScript',
         iconClass: '',
-        logo:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/1200px-C_Sharp_wordmark.svg.png',
-        percent: '60',
-        color: '#0b9e0b',
+        logo: 'js-ts.webp',
+        percent: '70',
+        color: '#ffc107',
         itemId: nanoid(),
       },
-      {
-        altName: 'TypeScript',
-        iconClass: '',
-        logo: 'https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png',
-        percent: '60',
-        color: '#2f74c0',
-        itemId: nanoid(),
-      },
-    ],
-  },
-  {
-    id: nanoid(),
-    name: 'Framework / Runtime',
-    items: [
       {
         altName: 'Angular',
         iconClass: 'fab fa-angular',
@@ -131,12 +141,48 @@ export const skillsData = [
         itemId: nanoid(),
       },
       {
+        altName: 'NgRx',
+        iconClass: '',
+        logo: 'ngrx.webp',
+        percent: '50',
+        color: '#ba2bd2',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'React',
+        iconClass: 'fab fa-react',
+        percent: '60',
+        color: '#61dafb',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'RxJS',
+        iconClass: '',
+        logo: 'rxjs.webp',
+        percent: '50',
+        color: '#61dafb',
+        itemId: nanoid(),
+      },
+    ],
+  },
+  {
+    id: nanoid(),
+    name: 'Server',
+    items: [
+      {
+        altName: 'C#',
+        iconClass: '',
+        logo: 'csharp.webp',
+        percent: '70',
+        color: '#0b9e0b',
+        itemId: nanoid(),
+      },
+      {
         altName: 'ASP.NET Core',
         iconClass: '',
-        logo:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png',
+        logo: `net-core.webp`,
         percent: '60',
-        color: '#7e1b96',
+        color: '#47474a',
         itemId: nanoid(),
       },
       {
@@ -147,40 +193,27 @@ export const skillsData = [
         itemId: nanoid(),
       },
       {
-        altName: 'Cypress',
+        altName: 'GraphQL',
         iconClass: '',
-        logo: 'https://pbs.twimg.com/profile_images/1044345247440896001/pXI1GDHW_400x400.jpg',
+        logo: 'graph-ql.webp',
+        percent: '30',
+        color: '#83cd29',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Python',
+        iconClass: '',
+        logo: 'python.webp',
+        percent: '30',
+        color: '#2f74c0',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Java',
+        iconClass: '',
+        logo: 'java.webp',
         percent: '50',
-        color: '#47474a',
-        itemId: nanoid(),
-      },
-    ],
-  },
-  {
-    id: nanoid(),
-    name: 'Library / APIs',
-    items: [
-      {
-        altName: 'NgRx',
-        iconClass: '',
-        logo: 'https://ngrx.io/assets/images/badge.svg',
-        percent: '60',
-        color: '#ba2bd2',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'ReactJS',
-        iconClass: 'fab fa-react',
-        percent: '60',
-        color: '#61dafb',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'React Redux',
-        iconClass: '',
-        logo: 'https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png',
-        percent: '60',
-        color: '#61dafb',
+        color: '#2f74c0',
         itemId: nanoid(),
       },
     ],
@@ -192,16 +225,46 @@ export const skillsData = [
       {
         altName: 'AWS',
         iconClass: 'fab fa-aws',
-        percent: '50',
+        percent: '55',
         color: '#ffc107',
         itemId: nanoid(),
       },
       {
         altName: 'Azure',
         iconClass: '',
-        logo: 'https://dzone.com/storage/temp/12165862-azurelogo-1.png',
+        logo: 'azure.webp',
+        percent: '40',
+        color: '#ffc107',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'GCP',
+        iconClass: '',
+        logo: 'gcp.webp',
         percent: '30',
         color: '#ffc107',
+        itemId: nanoid(),
+      },
+    ],
+  },
+  {
+    id: nanoid(),
+    name: 'Automation / Testing',
+    items: [
+      {
+        altName: 'Cypress',
+        iconClass: '',
+        logo: 'cypress.webp',
+        percent: '50',
+        color: '#47474a',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Selenium',
+        iconClass: '',
+        logo: 'selenium.webp',
+        percent: '50',
+        color: '#47474a',
         itemId: nanoid(),
       },
     ],
@@ -211,19 +274,26 @@ export const skillsData = [
     name: 'Storage',
     items: [
       {
-        altName: 'MS SQL Server',
+        altName: 'MS SQLServer',
         iconClass: '',
-        logo: 'https://img.icons8.com/color/452/microsoft-sql-server.png',
-        percent: '45',
+        logo: 'ssms.webp',
+        percent: '55',
         color: '#facc41',
         itemId: nanoid(),
       },
       {
         altName: 'PostgreSQL',
         iconClass: '',
-        logo:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png',
+        logo: 'postgresql.webp',
         percent: '45',
+        color: '#facc41',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'MongoDb',
+        iconClass: '',
+        logo: 'mongo-db.webp',
+        percent: '30',
         color: '#facc41',
         itemId: nanoid(),
       },
@@ -231,20 +301,12 @@ export const skillsData = [
   },
   {
     id: nanoid(),
-    name: 'Platform / Tools',
+    name: 'Tools',
     items: [
-      {
-        altName: 'Windows',
-        iconClass: 'fab fa-windows',
-        percent: '60',
-        color: '#61dafb',
-        itemId: nanoid(),
-      },
       {
         altName: 'Visual Studio 2019',
         iconClass: '',
-        logo:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1200px-Visual_Studio_Icon_2019.svg.png',
+        logo: 'visual-studio.webp',
         percent: '60',
         color: '#61dafb',
         itemId: nanoid(),
@@ -252,9 +314,16 @@ export const skillsData = [
       {
         altName: 'Visual Studio Code',
         iconClass: '',
-        logo:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png',
-        percent: '60',
+        logo: 'visual-studio-code.webp',
+        percent: '75',
+        color: '#61dafb',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Dokcer',
+        iconClass: '',
+        logo: 'docker.webp',
+        percent: '45',
         color: '#61dafb',
         itemId: nanoid(),
       },
