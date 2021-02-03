@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import { ProgressBar, Container, Row, Col } from 'react-bootstrap';
+import Img from 'gatsby-image';
+import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
@@ -12,6 +15,7 @@ const borderBottomStyle = {
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
+  const { cta } = skills;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -29,9 +33,9 @@ const Skills = () => {
   return (
     <section id="skills">
       <Container>
-        <div className="project-wrapper">
+        <div className="project-wrapper mb-4">
           <Title title="Skills" />
-          <Row>
+          <Row className="mb-0">
             {skills.length &&
               skills.map((skill) => {
                 const { id, name, items } = skill;
@@ -48,17 +52,17 @@ const Skills = () => {
                         <h2 className="pb-4" style={borderBottomStyle}>
                           {name}
                         </h2>
-                        {items.map((item) => {
+                        {items.map((item, index) => {
                           const { itemId, altName, percent, iconClass, color, logo } = item;
                           let label = '';
                           switch (true) {
-                            case percent >= 50 && percent < 75:
+                            case percent >= 40 && percent < 55:
                               label = 'Intermediate';
                               break;
-                            case percent >= 75 && percent < 90:
+                            case percent >= 55 && percent < 85:
                               label = 'Advance';
                               break;
-                            case percent >= 90 && percent <= 100:
+                            case percent >= 85 && percent <= 100:
                               label = 'Expert';
                               break;
                             default:
@@ -66,30 +70,74 @@ const Skills = () => {
                               break;
                           }
                           return (
-                            <div key={itemId} className="p-4">
-                              <Row className="mb-2 p-2">
-                                <Col lg={2} md={2} sm={2}>
-                                  {iconClass ? (
-                                    <span>
-                                      <i
-                                        className={iconClass}
-                                        style={{ color, fontSize: '2.5rem' }}
+                            <Fade
+                              key={itemId}
+                              left={isDesktop}
+                              bottom={isMobile}
+                              duration={1000}
+                              delay={500 + index * 100}
+                              distance="30px"
+                            >
+                              <div className="pt-2 pr-4 pl-4">
+                                <Row className="mb-0 pl-2 pr-2">
+                                  <Col lg={2} md={2} sm={2}>
+                                    {iconClass ? (
+                                      <span title={altName}>
+                                        <i
+                                          className={iconClass}
+                                          style={{ color, fontSize: '2.5rem' }}
+                                        />
+                                      </span>
+                                    ) : (
+                                      <StaticQuery
+                                        query={graphql`
+                                          query {
+                                            images: allFile {
+                                              edges {
+                                                node {
+                                                  relativePath
+                                                  name
+                                                  childImageSharp {
+                                                    fixed(width: 64) {
+                                                      ...GatsbyImageSharpFixed
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        `}
+                                        render={(data) => {
+                                          const image = data.images.edges.find((n) =>
+                                            n.node.relativePath.includes(logo)
+                                          );
+
+                                          if (!image) return null;
+
+                                          const imageFixed = image.node.childImageSharp.fixed;
+                                          return (
+                                            <Img
+                                              title={altName}
+                                              style={{ width: '2.5rem', height: '2.5rem' }}
+                                              alt={altName}
+                                              fixed={imageFixed}
+                                            />
+                                          );
+                                        }}
                                       />
-                                    </span>
-                                  ) : (
-                                    <img src={logo} alt={altName} style={{ width: '2.5rem' }} />
-                                  )}
-                                </Col>
-                                <Col lg={10} md={10} sm={10}>
-                                  <ProgressBar
-                                    animated
-                                    now={percent}
-                                    label={label}
-                                    variant="folio"
-                                  />
-                                </Col>
-                              </Row>
-                            </div>
+                                    )}
+                                  </Col>
+                                  <Col lg={10} md={10} sm={10}>
+                                    <ProgressBar
+                                      animated
+                                      now={percent}
+                                      label={label}
+                                      variant="folio"
+                                    />
+                                  </Col>
+                                </Row>
+                              </div>
+                            </Fade>
                           );
                         })}
                       </div>
@@ -99,6 +147,13 @@ const Skills = () => {
               })}
           </Row>
         </div>
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <p className="hero-cta">
+            <Link to="education" smooth duration={1000}>
+              <span className="cta-btn cta-btn--hero">{cta || 'Education'}</span>
+            </Link>
+          </p>
+        </Fade>
       </Container>
     </section>
   );
