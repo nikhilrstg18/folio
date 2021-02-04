@@ -29,7 +29,7 @@ const Education = () => {
   return (
     <section id="education">
       <Container>
-        <Title title="Education" />
+        <Title title="Work experience & Education" subTitle="Journey so far" />
         <VerticalTimeline className="mb-4">
           {education.length &&
             education.map((item) => {
@@ -37,7 +37,7 @@ const Education = () => {
               return (
                 <VerticalTimelineElement
                   key={id}
-                  className="vertical-timeline-element--work"
+                  className={`vertical-timeline-element--${icon}`}
                   contentStyle={{ color: '#333' }}
                   contentArrowStyle={{ borderRight: '7px solid #fFF' }}
                   date={`${startDate} - ${endDate}`}

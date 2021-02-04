@@ -16,11 +16,10 @@
   }
   .vertical-timeline {
     .vertical-timeline-element {
-      .vertical-timeline-element-date::nth-child(n + 1) {
-        left: 92%;
-      }
-      .vertical-timeline-element-date::nth-child(2n) {
-        right: 124%;
+      &:nth-child(odd) {
+        div span.vertical-timeline-element-date {
+          text-align: left;
+        }
       }
       &--work {
         div {
@@ -32,6 +31,15 @@
             font-size: 1.6rem;
             color: #fff;
             font-weight: bold;
+            @media only screen and (max-width: 1169px) {
+              color: #333333;
+              width: 100%;
+              text-align: center !important;
+            }
+          }
+          p {
+            font-size: 1.3rem;
+            color: #333333;
           }
         }
       }
@@ -45,6 +53,15 @@
             font-size: 1.6rem;
             color: #fff;
             font-weight: bold;
+            @media only screen and (max-width: 1169px) {
+              color: #333333;
+              width: 100%;
+              text-align: center;
+            }
+          }
+          p {
+            font-size: 1.3rem;
+            color: #333333;
           }
         }
       }

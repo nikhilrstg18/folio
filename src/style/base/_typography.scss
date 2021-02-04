@@ -24,10 +24,20 @@ a:hover {
 
 .section-title {
   margin: 0px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
   font-size: $big-font-size;
   font-weight: bold;
   text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+}
+
+.section-subtitle {
+  margin: 0px;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
 
   @include respond(phone) {
     font-size: 2.8rem;

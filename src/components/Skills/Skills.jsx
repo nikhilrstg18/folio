@@ -34,7 +34,7 @@ const Skills = () => {
     <section id="skills">
       <Container>
         <div className="project-wrapper mb-4">
-          <Title title="Skills" />
+          <Title title="Skills" subTitle="There is always scope for more but I'm good at" />
           <Row className="mb-0">
             {skills.length &&
               skills.map((skill) => {
@@ -150,7 +150,7 @@ const Skills = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <p className="hero-cta">
             <Link to="education" smooth duration={1000}>
-              <span className="cta-btn cta-btn--hero">{cta || 'Education'}</span>
+              <span className="cta-btn cta-btn--hero">{cta || 'Work Experience & Education'}</span>
             </Link>
           </p>
         </Fade>
