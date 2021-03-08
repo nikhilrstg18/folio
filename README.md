@@ -3,7 +3,7 @@
 ## A clean, beautiful and responsive portfolio template for Developers
 
 <h2 align="center">
-  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Gatsby Simplefolio" width="600px" />
+  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Gatsby folio" width="600px" />
   <br>
 </h2>
 
@@ -19,7 +19,7 @@
 ⚡️ Well organized documentation
 
 To view a demo example, **[click here](https://gatsby-simplefolio.netlify.com/)**\
-To view a live example, **[click here](https://cobidev.com/)**
+To view a live example, **[click here](https://nikhilrstg18.netlify.app/)**
 
 ---
 
@@ -53,10 +53,10 @@ From your command line, first clone Simplefolio:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/cobidev/gatsby-simplefolio
+$ git clone https://github.com/nikhilrstg18/folio
 
 # Go into the repository
-$ cd gatsby-simplefolio
+$ cd folio
 
 # Remove current origin repository
 $ git remote remove origin

@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "folio",
   "homepage": "https://nikhilrstg18.github.io/",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A simplified bare-bones starter for Gatsby folio",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -16,6 +16,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "bootstrap": "^4.5.0",
     "gatsby": "^2.23.7",
     "gatsby-image": "^2.4.7",
@@ -36,7 +38,9 @@
     "react-helmet": "^6.1.0",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.16",
-    "react-tilt": "^0.1.4"
+    "react-tilt": "^0.1.4",
+    "react-vertical-timeline-component": "^3.3.3"
+
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
