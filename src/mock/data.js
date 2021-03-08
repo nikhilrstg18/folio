@@ -28,16 +28,17 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.webp',
-    title: 'Insights',
+    img: 'insights.webp',
+    title: 'PC Insights',
     info: 'Angular | Clarity Fx',
-    info2: 'comming soon...',
-    url: 'https://github.io/nikhilrstg18/',
-    repo: '', // if no repo, the button will not show up
+    info2:
+      'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid any interruption in productivity.',
+    url: 'https://nikhilrstg18.github.io/insights/',
+    repo: 'https://github.com/nikhilrstg18/insights', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'project.webp',
     title: 'atom',
     info: 'C# | Selenium | API / UI Automation Fx',
     info2: 'comming soon...',
@@ -46,7 +47,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'project.webp',
     title: 'oShop',
     info: 'Angular | Firebase',
     info2: 'comming soon...',
