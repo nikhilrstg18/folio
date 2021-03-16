@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
@@ -22,14 +24,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Nikhil's folio`,
+        short_name: `folio`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#02aab0`,
+        background_color: `#E100FF`,
+        theme_color: `#7F00FF`,
         display: `standalone`,
         icon: 'src/images/favicon.png',
       },
     },
   ],
+  pathPrefix: isProd ? `/folio/` : '',
 };
