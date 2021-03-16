@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
@@ -31,7 +31,7 @@ const Projects = () => {
             subTitle="Showcase of my latest works, projects and developments"
           />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, info, info2, url, repo, imgs, id } = project;
 
             return (
               <Row key={id}>
@@ -103,7 +103,20 @@ const Projects = () => {
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
+                            <Carousel>
+                              {imgs &&
+                                imgs.map((imgObj) => {
+                                  const { imgId, caption, img } = imgObj;
+                                  return (
+                                    <Carousel.Item key={imgId} interval={3000}>
+                                      <ProjectImg alt={caption} filename={img} />
+                                      <Carousel.Caption className="carousal-caption">
+                                        <p style={{ color: 'white' }}>{caption}</p>
+                                      </Carousel.Caption>
+                                    </Carousel.Item>
+                                  );
+                                })}
+                            </Carousel>
                           </div>
                         </Tilt>
                       </a>
