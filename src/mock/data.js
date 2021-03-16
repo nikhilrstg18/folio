@@ -28,7 +28,23 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'insights.webp',
+    imgs: [
+      {
+        id: nanoid(),
+        img: 'insightsdashboard.webp',
+        caption: 'Dashboard | Helicopter view of PC Insights.',
+      },
+      {
+        id: nanoid(),
+        img: 'insightslist.webp',
+        caption: ' Grid | Refine, analyze insights with heatmap for PCs.',
+      },
+      {
+        id: nanoid(),
+        img: 'insightsdetail.webp',
+        caption: 'Detail | Insights Summary of a PC',
+      },
+    ],
     title: 'PC Insights',
     info: 'Angular | Clarity Fx',
     info2:
@@ -38,7 +54,23 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.webp',
+    imgs: [
+      {
+        id: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+      },
+      {
+        id: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+      },
+      {
+        id: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+      },
+    ],
     title: 'atom',
     info: 'C# | Selenium | API / UI Automation Fx',
     info2: 'comming soon...',
@@ -47,7 +79,23 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.webp',
+    imgs: [
+      {
+        id: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+      },
+      {
+        id: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+      },
+      {
+        id: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+      },
+    ],
     title: 'oShop',
     info: 'Angular | Firebase',
     info2: 'comming soon...',
