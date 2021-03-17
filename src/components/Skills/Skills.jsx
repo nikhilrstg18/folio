@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import Fade from 'react-reveal/Fade';
-import { ProgressBar, Container, Row, Col } from 'react-bootstrap';
+import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import React, { useContext, useEffect, useState } from 'react';
+import { Col, Container, ProgressBar, Row } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';

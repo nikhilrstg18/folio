@@ -1,13 +1,13 @@
-import React, { useContext, useState, useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
-import { Container } from 'react-bootstrap';
-import { Link } from 'react-scroll';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
+import React, { useContext, useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
+import { Link } from 'react-scroll';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import Title from '../Title/Title';
-import PortfolioContext from '../../context/context';
 import 'react-vertical-timeline-component/style.min.css';
+import PortfolioContext from '../../context/context';
+import Title from '../Title/Title';
 
 const Education = () => {
   const { education } = useContext(PortfolioContext);

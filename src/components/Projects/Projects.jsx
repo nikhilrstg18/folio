@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import Title from '../Title/Title';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -83,43 +83,36 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
-                      <a
-                        href={url || '#!'}
-                        target="_blank"
-                        aria-label="Project Link"
-                        rel="noopener noreferrer"
+                      <Tilt
+                        options={{
+                          reverse: false,
+                          max: 8,
+                          perspective: 1000,
+                          scale: 1,
+                          speed: 300,
+                          transition: true,
+                          axis: null,
+                          reset: true,
+                          easing: 'cubic-bezier(.03,.98,.52,.99)',
+                        }}
                       >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <Carousel>
-                              {imgs &&
-                                imgs.map((imgObj) => {
-                                  const { imgId, caption, img } = imgObj;
-                                  return (
-                                    <Carousel.Item key={imgId} interval={3000}>
-                                      <ProjectImg alt={caption} filename={img} />
-                                      <Carousel.Caption className="carousal-caption">
-                                        <p style={{ color: 'white' }}>{caption}</p>
-                                      </Carousel.Caption>
-                                    </Carousel.Item>
-                                  );
-                                })}
-                            </Carousel>
-                          </div>
-                        </Tilt>
-                      </a>
+                        <div data-tilt className="thumbnail rounded">
+                          <Carousel>
+                            {imgs &&
+                              imgs.map((imgObj) => {
+                                const { imgId, caption, img } = imgObj;
+                                return (
+                                  <Carousel.Item key={imgId} interval={3000}>
+                                    <ProjectImg alt={caption} filename={img} />
+                                    <Carousel.Caption className="carousal-caption">
+                                      <p style={{ color: 'white' }}>{caption}</p>
+                                    </Carousel.Caption>
+                                  </Carousel.Item>
+                                );
+                              })}
+                          </Carousel>
+                        </div>
+                      </Tilt>
                     </div>
                   </Fade>
                 </Col>

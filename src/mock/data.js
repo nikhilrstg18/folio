@@ -30,17 +30,17 @@ export const projectsData = [
     id: nanoid(),
     imgs: [
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'insightsdashboard.webp',
         caption: 'Dashboard | Helicopter view of PC Insights.',
       },
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'insightslist.webp',
         caption: ' Grid | Refine, analyze insights with heatmap for PCs.',
       },
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'insightsdetail.webp',
         caption: 'Detail | Insights Summary of a PC',
       },
@@ -56,17 +56,17 @@ export const projectsData = [
     id: nanoid(),
     imgs: [
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'project.webp',
         caption: 'coming soon...',
       },
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'project.webp',
         caption: 'coming soon...',
       },
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'project.webp',
         caption: 'coming soon...',
       },
@@ -81,17 +81,17 @@ export const projectsData = [
     id: nanoid(),
     imgs: [
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'project.webp',
         caption: 'coming soon...',
       },
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'project.webp',
         caption: 'coming soon...',
       },
       {
-        id: nanoid(),
+        imgId: nanoid(),
         img: 'project.webp',
         caption: 'coming soon...',
       },
