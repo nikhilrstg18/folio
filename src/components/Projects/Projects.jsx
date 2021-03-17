@@ -50,7 +50,7 @@ const Projects = () => {
                           {info ||
                             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        <p className="mb-4 taj">{info2 || ''}</p>
                       </div>
                       <a
                         target="_blank"
@@ -100,13 +100,15 @@ const Projects = () => {
                           <Carousel>
                             {imgs &&
                               imgs.map((imgObj) => {
-                                const { imgId, caption, img } = imgObj;
+                                const { imgId, caption, img, interval } = imgObj;
                                 return (
-                                  <Carousel.Item key={imgId} interval={3000}>
+                                  <Carousel.Item key={imgId} interval={interval}>
                                     <ProjectImg alt={caption} filename={img} />
-                                    <Carousel.Caption className="carousal-caption">
-                                      <p>{caption}</p>
-                                    </Carousel.Caption>
+                                    {caption && (
+                                      <Carousel.Caption className="carousal-caption">
+                                        <p>{caption}</p>
+                                      </Carousel.Caption>
+                                    )}
                                   </Carousel.Item>
                                 );
                               })}
