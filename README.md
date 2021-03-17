@@ -3,7 +3,7 @@
 ## A clean, beautiful and responsive portfolio template for Developers
 
 <h2 align="center">
-  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Gatsby folio" width="600px" />
+  <img src="https://github.com/nikhilrstg18/folio/blob/main/src/images/folio.gif" alt="Folio" width="600px" />
   <br>
 </h2>
 
@@ -236,11 +236,6 @@ Once you have done with your setup. You need to put your website online!
 
 I highly recommend to use [Netlify](https://netlify.com) to achieve this on the EASIEST WAY
 
-## Others versions 👥
-
-[Simplefolio](https://github.com/cobidev/simplefolio) by [Jacobo Martinez](https://github.com/cobidev)\
-[Ember.js Simplefolio](https://github.com/sernadesigns/simplefolio-ember) by [Michael Serna](https://github.com/sernadesigns)
-
 ## Technologies used 🛠️
 
 - [Gatsby](https://www.gatsbyjs.org/) - Static Site Generator
@@ -251,7 +246,7 @@ I highly recommend to use [Netlify](https://netlify.com) to achieve this on the 
 
 ## Authors
 
-- **Jacobo Martinez** - [https://github.com/cobidev](https://github.com/cobidev)
+- **Nikhil Rustagi** - [https://github.com/nikhilrstg18](https://github.com/nikhilrstg18)
 
 ## Status
 

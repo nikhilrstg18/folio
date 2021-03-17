@@ -32,23 +32,23 @@ export const projectsData = [
       {
         imgId: nanoid(),
         img: 'insightsdashboard.webp',
-        caption: 'Dashboard | Helicopter view of PC Insights.',
+        caption: 'Dashboard | PCs Insights Snapshot.',
       },
       {
         imgId: nanoid(),
         img: 'insightslist.webp',
-        caption: ' Grid | Refine, analyze insights with heatmap for PCs.',
+        caption: ' Grid | PC Insights Analysis.',
       },
       {
         imgId: nanoid(),
         img: 'insightsdetail.webp',
-        caption: 'Detail | Insights Summary of a PC',
+        caption: 'Detail | PC Insight summary',
       },
     ],
     title: 'PC Insights',
-    info: 'Angular | Clarity Fx',
+    info: 'Angular 11 | Clarity Design System 5.0.3',
     info2:
-      'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid any interruption in productivity.',
+      'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid potential impediments for optimal productivity.',
     url: 'https://nikhilrstg18.github.io/insights/',
     repo: 'https://github.com/nikhilrstg18/insights', // if no repo, the button will not show up
   },

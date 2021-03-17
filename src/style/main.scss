@@ -18,20 +18,3 @@
 @import './sections/education';
 
 @import './vendor/css/font-awesome.min.css';
-
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
-}
-.carousal-caption{
-    opacity: 0.8;
-    background-Color: #7F00FF;
-    background-image: linear-gradient(135deg, #7F00FF 0%, #E100FF 100%);
-    padding: .5rem;
-    p{
-        color: white;
-        @media only screen and (max-width: 441) {
-            font-size: 1.1rem;
-          }
-    }
-}

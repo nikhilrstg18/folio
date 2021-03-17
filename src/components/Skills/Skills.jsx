@@ -84,8 +84,8 @@ const Skills = () => {
                                     {iconClass ? (
                                       <span title={altName}>
                                         <i
-                                          className={iconClass}
-                                          style={{ color, fontSize: '2.5rem' }}
+                                          className={`icon ${iconClass}`}
+                                          style={{ color, fontSize: '3rem' }}
                                         />
                                       </span>
                                     ) : (
@@ -118,7 +118,7 @@ const Skills = () => {
                                           return (
                                             <Img
                                               title={altName}
-                                              style={{ width: '2.5rem', height: '2.5rem' }}
+                                              style={{ width: '3rem', height: '3rem' }}
                                               alt={altName}
                                               fixed={imageFixed}
                                             />
@@ -127,7 +127,7 @@ const Skills = () => {
                                       />
                                     )}
                                   </Col>
-                                  <Col lg={10} md={10} sm={10}>
+                                  <Col lg={10} md={10} sm={10} className="progress-div">
                                     <ProgressBar
                                       animated
                                       now={percent}
