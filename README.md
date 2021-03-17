@@ -95,7 +95,7 @@ $ sudo npm install --unsafe-perm=true --allow-root
 Once your server has started, go to this url `http://localhost:8000/` and you will see the website running on a Development Server:
 
 <h2 align="center">
-  <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.png" alt="Gatsby Simplefolio" width="100%">
+  <img src="https://github.com/nikhilrstg18/folio/blob/main/src/images/folio.webp" alt="Folio" width="100%">
 </h2>
 
 ---
