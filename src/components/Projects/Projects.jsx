@@ -105,7 +105,7 @@ const Projects = () => {
                                   <Carousel.Item key={imgId} interval={3000}>
                                     <ProjectImg alt={caption} filename={img} />
                                     <Carousel.Caption className="carousal-caption">
-                                      <p style={{ color: 'white' }}>{caption}</p>
+                                      <p>{caption}</p>
                                     </Carousel.Caption>
                                   </Carousel.Item>
                                 );
