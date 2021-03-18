@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 export const headData = {
   title: 'Nikhil Rustagi', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
-  description: 'Portfolio folio software engineer react', // e.g: Welcome to my website
+  description: 'one page portfolio software engineer developer nikhil rustagi folio', // e.g: Welcome to my website
 };
 
 // HERO DATA
@@ -21,214 +21,10 @@ export const aboutData = {
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: '', // if no resume, the button will not show up
 };
 
-// PROJECTS DATA
-export const projectsData = [
-  {
-    id: nanoid(),
-    imgs: [
-      {
-        imgId: nanoid(),
-        img: 'insightsdashboard.webp',
-        caption: 'Dashboard | PCs Insights Snapshot.',
-        interval: 2500,
-      },
-      {
-        imgId: nanoid(),
-        img: 'insightslist.webp',
-        caption: ' Grid | PC Insights Analysis.',
-        interval: 2500,
-      },
-      {
-        imgId: nanoid(),
-        img: 'insightsdetail.webp',
-        caption: 'Detail | PC Insight summary',
-        interval: 2500,
-      },
-    ],
-    title: 'PC Insights',
-    info: 'Angular | Clarity Design System',
-    info2:
-      'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid potential impediments for optimal productivity.',
-    url: 'https://nikhilrstg18.github.io/insights/',
-    repo: 'https://github.com/nikhilrstg18/insights', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    imgs: [
-      {
-        imgId: nanoid(),
-        img: 'folio1.webp',
-        caption: 'One Page Responsive Portfolio',
-        interval: 2000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'folio2.webp',
-        caption: '',
-        interval: 2000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'folio3.webp',
-        caption: '',
-        interval: 2000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'folio4.webp',
-        caption: '',
-        interval: 2000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'folio5.webp',
-        caption: '',
-        interval: 2000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'folio6.webp',
-        caption: '',
-        interval: 2000,
-      },
-    ],
-    title: 'Folio',
-    info: 'React | Gatsby',
-    info2: 'A clean, beautiful and responsive portfolio template for developers',
-    url: 'https://nikhilrustagi.netlify.app',
-    repo: 'https://github.com/nikhilrstg18/folio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    imgs: [
-      {
-        imgId: nanoid(),
-        img: 'project.webp',
-        caption: 'coming soon...',
-        interval: 1000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'project.webp',
-        caption: 'coming soon...',
-        interval: 1000,
-      },
-      {
-        imgId: nanoid(),
-        img: 'project.webp',
-        caption: 'coming soon...',
-        interval: 1000,
-      },
-    ],
-    title: 'Boutique Central',
-    info: 'Angular | Material UI',
-    info2: 'coming soon...',
-    url: 'https://github.io/nikhilrstg18/',
-    repo: '', // if no repo, the button will not show up
-  },
-];
-
-// CONTACT DATA
-export const contactData = {
-  cta: '',
-  btn: '',
-  email: 'nikhilrstg18@gmail.com',
-};
-
-// FOOTER DATA
-export const footerData = {
-  networks: [
-    {
-      id: nanoid(),
-      name: 'twitter',
-      url: 'https://twitter.com/rustagi_nikhil',
-    },
-    {
-      id: nanoid(),
-      name: 'linkedin',
-      url: 'https://www.linkedin.com/in/nikhil-rustagi/',
-    },
-    {
-      id: nanoid(),
-      name: 'github',
-      url: 'https://github.com/nikhilrstg18',
-    },
-  ],
-};
-
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
-};
-
-export const educationData = [
-  {
-    id: nanoid(),
-    startDate: '2020',
-    endDate: 'present',
-    title: 'Sr. Software Engineer - Dev',
-    org: 'Cyber Group India (P) Ltd, Noida, UP',
-    titleDesc: 'Web App Development | Cloud Solutions with AWS and Azure | documentation',
-    icon: 'work',
-    bgColor: '#E100FF',
-  },
-  {
-    id: nanoid(),
-    startDate: '2018',
-    endDate: '2020',
-    title: 'Software Engineer - Dev',
-    org: 'Cyber Group India (P) Ltd, Noida, UP',
-    titleDesc:
-      'Web App Development | Creation of new features | Proactive in agile team events | e2e ownership for epics',
-    icon: 'work',
-    bgColor: '#E100FF',
-  },
-  {
-    id: nanoid(),
-    startDate: '2016',
-    endDate: '2018',
-    title: 'Associate Software Engineer - QA',
-    org: 'Cyber Group India (P) Ltd, Noida, UP',
-    titleDesc:
-      'Web App Support | Test-Plan & Test-Case Design | Designing and maintaining automation framework | Reporting',
-    icon: 'work',
-    bgColor: '#E100FF',
-  },
-  {
-    id: nanoid(),
-    startDate: '2012',
-    endDate: '2016',
-    title: 'B.Tech in ECE | AKTU',
-    org: 'HRIT Group of Institution, Ghaziabad, U.P.',
-    titleDesc: 'Aggregate Score - 71.4% | I-division',
-    icon: 'education',
-    bgColor: '#7F00FF',
-  },
-  {
-    id: nanoid(),
-    startDate: '2009',
-    endDate: '2011',
-    title: 'A.I.S.S.C.E. | CBSE',
-    org: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
-    titleDesc: 'Aggregate Score - 73%',
-    icon: 'education',
-    bgColor: '#7F00FF',
-  },
-  {
-    id: nanoid(),
-    startDate: '2008',
-    endDate: '2009',
-    title: 'A.I.S.C.E. | CBSE',
-    org: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
-    titleDesc: 'Aggregate Score - 86%',
-    icon: 'education',
-    bgColor: '#7F00FF',
-  },
-];
-
+// SKILLS DATA
 export const skillsData = [
   {
     id: nanoid(),
@@ -447,3 +243,209 @@ export const skillsData = [
     ],
   },
 ];
+
+// EDUCATION DATA
+export const educationData = [
+  {
+    id: nanoid(),
+    startDate: '2020',
+    endDate: 'present',
+    title: 'Sr. Software Engineer - Dev',
+    org: 'Cyber Group India (P) Ltd, Noida, UP',
+    titleDesc: 'Web App Development | Cloud Solutions with AWS and Azure | documentation',
+    icon: 'work',
+    bgColor: '#E100FF',
+  },
+  {
+    id: nanoid(),
+    startDate: '2018',
+    endDate: '2020',
+    title: 'Software Engineer - Dev',
+    org: 'Cyber Group India (P) Ltd, Noida, UP',
+    titleDesc:
+      'Web App Development | Creation of new features | Proactive in agile team events | e2e ownership for epics',
+    icon: 'work',
+    bgColor: '#E100FF',
+  },
+  {
+    id: nanoid(),
+    startDate: '2016',
+    endDate: '2018',
+    title: 'Associate Software Engineer - QA',
+    org: 'Cyber Group India (P) Ltd, Noida, UP',
+    titleDesc:
+      'Web App Support | Test-Plan & Test-Case Design | Designing and maintaining automation framework | Reporting',
+    icon: 'work',
+    bgColor: '#E100FF',
+  },
+  {
+    id: nanoid(),
+    startDate: '2012',
+    endDate: '2016',
+    title: 'B.Tech in ECE | AKTU',
+    org: 'HRIT Group of Institution, Ghaziabad, U.P.',
+    titleDesc: 'Aggregate Score - 71.4% | I-division',
+    icon: 'education',
+    bgColor: '#7F00FF',
+  },
+  {
+    id: nanoid(),
+    startDate: '2009',
+    endDate: '2011',
+    title: 'A.I.S.S.C.E. | CBSE',
+    org: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
+    titleDesc: 'Aggregate Score - 73%',
+    icon: 'education',
+    bgColor: '#7F00FF',
+  },
+  {
+    id: nanoid(),
+    startDate: '2008',
+    endDate: '2009',
+    title: 'A.I.S.C.E. | CBSE',
+    org: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
+    titleDesc: 'Aggregate Score - 86%',
+    icon: 'education',
+    bgColor: '#7F00FF',
+  },
+];
+
+// PROJECTS DATA
+export const projectsData = [
+  {
+    id: nanoid(),
+    imgs: [
+      {
+        imgId: nanoid(),
+        img: 'insightsdashboard.webp',
+        caption: 'Dashboard | PCs Insights Snapshot.',
+        interval: 2500,
+      },
+      {
+        imgId: nanoid(),
+        img: 'insightslist.webp',
+        caption: ' Grid | PC Insights Analysis.',
+        interval: 2500,
+      },
+      {
+        imgId: nanoid(),
+        img: 'insightsdetail.webp',
+        caption: 'Detail | PC Insight summary',
+        interval: 2500,
+      },
+    ],
+    title: 'PC Insights',
+    info: 'Angular | Clarity Design System | Sass',
+    info2:
+      'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid potential impediments for optimal productivity.',
+    url: 'https://nikhilrstg18.github.io/insights/',
+    repo: 'https://github.com/nikhilrstg18/insights', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    imgs: [
+      {
+        imgId: nanoid(),
+        img: 'folio1.webp',
+        caption: 'One Page Responsive Portfolio',
+        interval: 2000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'folio2.webp',
+        caption: '',
+        interval: 2000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'folio3.webp',
+        caption: '',
+        interval: 2000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'folio4.webp',
+        caption: '',
+        interval: 2000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'folio5.webp',
+        caption: '',
+        interval: 2000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'folio6.webp',
+        caption: '',
+        interval: 2000,
+      },
+    ],
+    title: 'Folio',
+    info: 'React | Gatsby | GraphQL | Bootstrap 4 | Sass | Fontawesome',
+    info2: 'A clean, beautiful and responsive portfolio template for developers',
+    url: 'https://nikhilrustagi.netlify.app',
+    repo: 'https://github.com/nikhilrstg18/folio', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    imgs: [
+      {
+        imgId: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+        interval: 1000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+        interval: 1000,
+      },
+      {
+        imgId: nanoid(),
+        img: 'project.webp',
+        caption: 'coming soon...',
+        interval: 1000,
+      },
+    ],
+    title: 'Boutique Central',
+    info: 'Angular | Material UI',
+    info2: 'coming soon...',
+    url: 'https://github.io/nikhilrstg18/',
+    repo: '', // if no repo, the button will not show up
+  },
+];
+
+// CONTACT DATA
+export const contactData = {
+  cta: '',
+  btn: '',
+  email: 'nikhilrstg18@gmail.com',
+};
+
+// FOOTER DATA
+export const footerData = {
+  networks: [
+    {
+      id: nanoid(),
+      name: 'twitter',
+      url: 'https://twitter.com/rustagi_nikhil',
+    },
+    {
+      id: nanoid(),
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in/nikhil-rustagi/',
+    },
+    {
+      id: nanoid(),
+      name: 'github',
+      url: 'https://github.com/nikhilrstg18',
+    },
+  ],
+};
+
+// Github start/fork buttons
+export const githubButtons = {
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
+};

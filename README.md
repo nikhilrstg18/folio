@@ -1,6 +1,6 @@
-# Folio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/gatsby-simplefolio?color=blue)](https://github.com/cobidev/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/gatsby-simplefolio)
+# Folio 🌹 [![GitHub](https://img.shields.io/github/license/nikhilrstg18/folio?color=blue)](https://github.com/nikhilrstg18/folio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/nikhilrstg18/folio) ![GitHub forks](https://img.shields.io/github/forks/nikhilrstg18/folio)
 
-## A clean, beautiful and responsive portfolio template for Developers
+## A clean, beautiful and responsive one-page portfolio template for developers
 
 <h2 align="center">
   <img src="https://github.com/nikhilrstg18/folio/blob/main/src/images/folio.gif" alt="Folio" width="600px" />
@@ -9,14 +9,14 @@
 
 ## Features
 
-⚡️ Modern UI Design + Reveal Animations\
-⚡️ One Page Layout built with React\
-⚡️ Styled with Bootstrap v4.3 + Custom SCSS\
-⚡️ Fully Responsive\
-⚡️ Configurable color scheme\
-⚡️ Image optimization with Gatsby\
-⚡️ Easy site customization\
-⚡️ Well organized documentation
+🌹 Modern UI Design + Reveal Animations\
+🌹 One Page Layout built with React\
+🌹 Styled with Bootstrap v4.3 + Custom SCSS\
+🌹 Fully Responsive\
+🌹 Configurable color scheme\
+🌹 Image optimization with Gatsby\
+🌹 Easy site customization\
+🌹 Well organized documentation
 
 To view a demo example, **[click here](https://gatsby-simplefolio.netlify.com/)**\
 To view a live example, **[click here](https://nikhilrstg18.netlify.app/)**
@@ -49,7 +49,7 @@ yarn@v1.21.1 or higher
 
 ## How To Use 🔧
 
-From your command line, first clone Simplefolio:
+From your command line, first clone Folio:
 
 ```bash
 # Clone this repository
@@ -100,11 +100,21 @@ Once your server has started, go to this url `http://localhost:8000/` and you wi
 
 ---
 
-## Instructions:
+## Instructions:👇
 
 ### Step 1 - STRUCTURE
 
-Go to `/src/mock/data.js` and fill your information, they are 5 objects:
+Go to `/src/mock/data.js` and fill your information, they are 8 objects:
+
+### Head Section
+
+```javascript
+export const headData = {
+  title: '', // e.g: 'Name | Developer'
+  lang: 'en', // e.g: en, es, fr, jp
+  description: '', // e.g: Welcome to my website or SEO keywords
+};
+```
 
 ### Hero Section
 
@@ -131,6 +141,51 @@ export const aboutData = {
 };
 ```
 
+### Skills Section
+
+**_Important Note_**: All the images must live inside the `src/images/` folder in order for Gatsby to show the images correctly.
+
+```javascript
+export const skillsData = [
+  {
+    id: nanoid(),
+    name: '', // skill group name
+    items: [
+      {
+        altName: '', // skill
+        iconClass: '', //is no iconClass, then logo will be rendered
+        logo: 'html-css.webp',
+        percent: '60',
+        color: '', //theme color
+        itemId: nanoid(),
+      },
+      ...
+    ],
+  },
+  ...
+];
+```
+
+### Work Experience & Education Section
+
+**_Important Note_**: All the images must live inside the `src/images/` folder in order for Gatsby to show the images correctly.
+
+```javascript
+export const educationData = [
+  {
+    id: nanoid(),
+    startDate: '', //start year  of latest experience
+    endDate: '', //end year  of latest experience
+    title: '', // role / position
+    org: '', // organization name with brief address
+    titleDesc: '', // one line description of role/position
+    icon: '', // work | education
+    bgColor: '',  // bgcolor for work | education
+  },
+  ...
+];
+```
+
 ### Projects Section
 
 **_Important Note_**: All the images must live inside the `src/images/` folder in order for Gatsby to show the images correctly.
@@ -141,21 +196,20 @@ Put as many projects object you want inside the `array`.
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    imgs: [
+      {
+        imgId: nanoid(),
+        img: 'project.webp', // recommended formats webp | use jpg for app to run in safari
+        caption: '', // if no caption, the caption will not show up
+        interval: 1000, // interval for bootstrap carousal
+      },
+      ...
+    ],
     title: '',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/nikhilrstg18/folio', // if no repo, the button will not show up
   },
   ...
 ];
@@ -230,6 +284,30 @@ $secondary-color: #00cdac;
 
 ---
 
+## PWA capabilities 👇
+
+change PWA capabilities in gatsby-config.js
+
+```javascript
+module.exports = {
+  plugins: [
+    ...{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: ``, // name of your PWA
+        short_name: `folio`, // short name of your PWA
+        start_url: `/`,
+        background_color: `#fafafa`, // splash screen background color of your PWA
+        theme_color: `#7F00FF`, // theme color of your PWA
+        display: `fullscreen`, // fullscreen | standalone | browser | minimla-ui
+        icon: 'src/images/favicon.png',
+        description: 'responsive one-page portfolio',
+      },
+    },
+  ],
+};
+```
+
 ## Deployment 📦
 
 Once you have done with your setup. You need to put your website online!
@@ -250,11 +328,7 @@ I highly recommend to use [Netlify](https://netlify.com) to achieve this on the 
 
 ## Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2365af6f-820a-4fb8-83e6-69a66f686dfe/deploy-status)](https://app.netlify.com/sites/gatsby-simplefolio/deploys)
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d79e0177-7801-46a5-bfe6-ebb366b86f63/deploy-status)](https://app.netlify.com/sites/nikhilrustagi/deploys)
 
 ## Acknowledgments 🎁
 
