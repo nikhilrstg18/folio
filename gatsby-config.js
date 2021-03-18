@@ -22,13 +22,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nikhil's folio`,
+        name: `Nikhil Rustagi`,
         short_name: `folio`,
         start_url: `/`,
-        background_color: `#E100FF`,
+        background_color: `#fafafa`,
         theme_color: `#7F00FF`,
         display: `standalone`,
-        icon: 'src/images/favicon.png',
+        icon: 'src/images/nlogo.png',
       },
     },
   ],
