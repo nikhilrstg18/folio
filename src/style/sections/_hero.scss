@@ -24,6 +24,40 @@
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
+  .hero-video {
+    position: absolute;
+    width: 57%;
+    left: 50%;
+    object-fit: contain;
+    transform: translate(-13%, -35%);
+  }
+  @media (max-width: 56.25em) {
+    .hero-video {
+      position: absolute;
+      width: 57%;
+      left: 50%;
+      object-fit: contain;
+      transform: translate(-50%, 50%);
+    }
+  }
+  @media (max-width: 37.5em) {
+    .hero-video {
+      position: absolute;
+      width: 57%;
+      left: 50%;
+      object-fit: contain;
+      transform: translate(-50%, 115%);
+    }
+  }
+  @media (max-width: 27.57em) {
+    .hero-video {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      object-fit: contain;
+      transform: translate(-50%, -90%);
+    }
+  }
 
   .hero-title {
     font-size: 5.6rem;
