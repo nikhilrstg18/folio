@@ -25,7 +25,7 @@
         div {
           .vertical-timeline-element-title {
             font-weight: bold;
-            color: #e100ff;
+            color: $secondary-color;
           }
           .vertical-timeline-element-date {
             font-size: 1.6rem;
@@ -47,7 +47,7 @@
         div {
           .vertical-timeline-element-title {
             font-weight: bold;
-            color: #7f00ff;
+            color: $primary-color;
           }
           .vertical-timeline-element-date {
             font-size: 1.6rem;

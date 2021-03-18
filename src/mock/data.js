@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'Nikhil Rustagi', // e.g: 'Name | Developer'
+  title: 'Nikhil Rustagi', // e.g: 'Name • Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'one page portfolio software engineer developer nikhil rustagi folio', // e.g: Welcome to my website
 };
@@ -11,7 +11,7 @@ export const headData = {
 export const heroData = {
   title: '',
   name: 'Nikhil Rustagi',
-  subtitle: 'Solutions Architect | Web Developer | Quality Analyst | Blogger',
+  subtitle: 'Solutions Architect • Web Developer • Quality Analyst • Blogger',
   cta: '',
 };
 
@@ -72,6 +72,14 @@ export const skillsData = [
         altName: 'RxJS',
         iconClass: '',
         logo: 'rxjs.webp',
+        percent: '50',
+        color: '#61dafb',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Clarity Design System',
+        iconClass: '',
+        logo: 'claritydesign-logo.webp',
         percent: '50',
         color: '#61dafb',
         itemId: nanoid(),
@@ -252,7 +260,7 @@ export const educationData = [
     endDate: 'present',
     title: 'Sr. Software Engineer - Dev',
     org: 'Cyber Group India (P) Ltd, Noida, UP',
-    titleDesc: 'Web App Development | Cloud Solutions with AWS and Azure | documentation',
+    titleDesc: 'Web App Development • Cloud Solutions with AWS and Azure • documentation',
     icon: 'work',
     bgColor: '#E100FF',
   },
@@ -263,7 +271,7 @@ export const educationData = [
     title: 'Software Engineer - Dev',
     org: 'Cyber Group India (P) Ltd, Noida, UP',
     titleDesc:
-      'Web App Development | Creation of new features | Proactive in agile team events | e2e ownership for epics',
+      'Web App Development • Creation of new features • Proactive in agile team events • e2e ownership for epics',
     icon: 'work',
     bgColor: '#E100FF',
   },
@@ -274,7 +282,7 @@ export const educationData = [
     title: 'Associate Software Engineer - QA',
     org: 'Cyber Group India (P) Ltd, Noida, UP',
     titleDesc:
-      'Web App Support | Test-Plan & Test-Case Design | Designing and maintaining automation framework | Reporting',
+      'Web App Support • Test-Plan & Test-Case Design • Designing and maintaining automation framework • Reporting',
     icon: 'work',
     bgColor: '#E100FF',
   },
@@ -282,9 +290,9 @@ export const educationData = [
     id: nanoid(),
     startDate: '2012',
     endDate: '2016',
-    title: 'B.Tech in ECE | AKTU',
+    title: 'B.Tech in ECE • AKTU',
     org: 'HRIT Group of Institution, Ghaziabad, U.P.',
-    titleDesc: 'Aggregate Score - 71.4% | I-division',
+    titleDesc: 'Aggregate Score - 71.4% • I-division',
     icon: 'education',
     bgColor: '#7F00FF',
   },
@@ -292,7 +300,7 @@ export const educationData = [
     id: nanoid(),
     startDate: '2009',
     endDate: '2011',
-    title: 'A.I.S.S.C.E. | CBSE',
+    title: 'A.I.S.S.C.E. • CBSE',
     org: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
     titleDesc: 'Aggregate Score - 73%',
     icon: 'education',
@@ -302,7 +310,7 @@ export const educationData = [
     id: nanoid(),
     startDate: '2008',
     endDate: '2009',
-    title: 'A.I.S.C.E. | CBSE',
+    title: 'A.I.S.C.E. • CBSE',
     org: 'Nutan Vidya Mandir Sr. Sec. School, Delhi',
     titleDesc: 'Aggregate Score - 86%',
     icon: 'education',
@@ -318,24 +326,24 @@ export const projectsData = [
       {
         imgId: nanoid(),
         img: 'insightsdashboard.webp',
-        caption: 'Dashboard | PCs Insights Snapshot.',
+        caption: 'Dashboard • PCs Insights Snapshot.',
         interval: 2500,
       },
       {
         imgId: nanoid(),
         img: 'insightslist.webp',
-        caption: ' Grid | PC Insights Analysis.',
+        caption: ' Grid • PC Insights Analysis.',
         interval: 2500,
       },
       {
         imgId: nanoid(),
         img: 'insightsdetail.webp',
-        caption: 'Detail | PC Insight summary',
+        caption: 'Detail • PC Insight summary',
         interval: 2500,
       },
     ],
     title: 'PC Insights',
-    info: 'Angular | Clarity Design System | Sass',
+    info: 'Angular • Clarity Design System • Sass',
     info2:
       'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid potential impediments for optimal productivity.',
     url: 'https://nikhilrstg18.github.io/insights/',
@@ -382,7 +390,7 @@ export const projectsData = [
       },
     ],
     title: 'Folio',
-    info: 'React | Gatsby | GraphQL | Bootstrap 4 | Sass | Fontawesome',
+    info: 'React • Gatsby • GraphQL • Bootstrap 4 • Sass • Fontawesome',
     info2: 'A clean, beautiful and responsive portfolio template for developers',
     url: 'https://nikhilrustagi.netlify.app',
     repo: 'https://github.com/nikhilrstg18/folio', // if no repo, the button will not show up
@@ -410,7 +418,7 @@ export const projectsData = [
       },
     ],
     title: 'Boutique Central',
-    info: 'Angular | Material UI',
+    info: 'Angular • Material UI',
     info2: 'coming soon...',
     url: 'https://github.io/nikhilrstg18/',
     repo: '', // if no repo, the button will not show up
