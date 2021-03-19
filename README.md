@@ -133,11 +133,38 @@ export const heroData = {
 
 ```javascript
 export const aboutData = {
-  img: 'profile.jpg', // put your profile image (recommended aspect radio: square)
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  title: '', // if no title, title and subTitle will not be rendered
+  subTitle: '', // if no subTitle, title and subTitle will not be rendered
+  img: 'profile.webp', // aspect ratio square
+  positions: [
+    {
+      id: nanoid(),
+      name: '',
+      positionLink: '',
+      positionAbout: '', // if no positionAbout, positionAbout will not be rendered
+    },
+    ...
+  ],
+  city: '', // Delhi
+  cityAround: '', // NCR, India
+  quickSkills: {
+    para: ``// one liner,
+    skills: [
+      {
+        id: nanoid(),
+        group: '', // Back-end | Font-End | Storage | Cloud
+        groupAbout: '',
+      },
+      ...
+    ],
+  },
+  currentOrg: {
+    name: '',
+    link: '',
+    paraOne: ``, // if no paraOne, paraOne will not be rendered
+    paraTwo: ``, // if no paraTwo, paraTwo will not be rendered
+  },
+  cta: 'Skills',
 };
 ```
 
