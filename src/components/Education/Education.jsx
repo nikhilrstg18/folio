@@ -54,7 +54,7 @@ const Education = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <Link to="projects" smooth duration={1000}>
-              <span className="cta-btn cta-btn--resume">{cta || 'Projects'}</span>
+              <span className="cta-btn cta-btn--folio-inverse">{cta || 'Projects'}</span>
             </Link>
           </p>
         </Fade>

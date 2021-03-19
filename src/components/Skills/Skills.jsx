@@ -150,7 +150,7 @@ const Skills = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <p className="hero-cta">
             <Link to="education" smooth duration={1000}>
-              <span className="cta-btn cta-btn--hero">{cta || 'Work Experience & Education'}</span>
+              <span className="cta-btn cta-btn--folio">{cta || 'Work Experience & Education'}</span>
             </Link>
           </p>
         </Fade>
