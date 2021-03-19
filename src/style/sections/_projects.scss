@@ -48,6 +48,19 @@
         color: $secondary-color;
       }
     }
+    &__actions {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      @include respond(phone) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
 
     &__image {
       width: 90%;

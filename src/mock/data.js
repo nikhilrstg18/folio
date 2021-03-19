@@ -402,7 +402,7 @@ export const projectsData = [
       {
         imgId: nanoid(),
         img: 'folio1.webp',
-        caption: 'One Page Responsive Portfolio',
+        caption: '',
         interval: 2000,
       },
       {
@@ -438,7 +438,8 @@ export const projectsData = [
     ],
     title: 'Folio',
     info: 'React • Gatsby • GraphQL • Bootstrap 4 • Sass • Fontawesome',
-    info2: 'A clean, beautiful and responsive portfolio template for developers',
+    info2:
+      'A clean, beautiful and responsive portfolio template for developers. Completely content driven and configurable makes it easy to spin up your portfolio website within 30 minutes',
     url: 'https://nikhilrustagi.netlify.app',
     repo: 'https://github.com/nikhilrstg18/folio', // if no repo, the button will not show up
   },
@@ -502,5 +503,5 @@ export const footerData = {
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
 };
