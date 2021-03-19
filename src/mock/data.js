@@ -17,11 +17,59 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
+  title: 'About Me',
+  subTitle: 'Recreating best of myself',
   img: 'profile.webp',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: '', // if no resume, the button will not show up
+  titles: [
+    {
+      id: nanoid(),
+      title: 'Web Developer',
+      titleLink: 'https://dotnet.microsoft.com/apps/aspnet',
+      titleAbout: 'Web Apps • APIs • µ-services',
+    },
+    {
+      id: nanoid(),
+      title: 'Certified AWS Solutions Architect - Associate®',
+      titleLink:
+        'https://www.youracclaim.com/badges/8987c8e4-cd70-48f2-9017-9af4188c841d?source=linked_in_profile',
+      titleAbout: '',
+    },
+    {
+      id: nanoid(),
+      title: 'Certified Scrum Master®',
+      titleLink: 'https://bcert.me/szliglrhu',
+      titleAbout: '',
+    },
+  ],
+  city: 'Delhi',
+  cityAround: 'NCR, India',
+  quickSkills: {
+    para: `I'm passionate about web development and spend workdays with my hands in below areas of web development`,
+    skills: [
+      {
+        id: nanoid(),
+        title: 'Back-end',
+        titleAbout: 'C# • Asp.Net • NodeJS',
+      },
+      {
+        id: nanoid(),
+        title: 'Front-end ',
+        titleAbout: 'Angular • React',
+      },
+      {
+        id: nanoid(),
+        title: 'Cloud',
+        titleAbout: 'AWS • Azure',
+      },
+    ],
+  },
+  currentOrg: {
+    name: 'Cyber Group',
+    link: 'https://www.cygrp.com/',
+    paraOne: `I'm not looking for any full-time position as of now`,
+    paraTwo: `I'm always open to ideas and projects that excite me`,
+  },
+  cta: 'Skills',
 };
 
 // SKILLS DATA
@@ -326,26 +374,25 @@ export const projectsData = [
       {
         imgId: nanoid(),
         img: 'insightsdashboard.webp',
-        caption: 'Dashboard • PCs Insights Snapshot.',
+        caption: '',
         interval: 2500,
       },
       {
         imgId: nanoid(),
         img: 'insightslist.webp',
-        caption: ' Grid • PC Insights Analysis.',
+        caption: '',
         interval: 2500,
       },
       {
         imgId: nanoid(),
         img: 'insightsdetail.webp',
-        caption: 'Detail • PC Insight summary',
+        caption: '',
         interval: 2500,
       },
     ],
     title: 'PC Insights',
     info: 'Angular • Clarity Design System • Sass',
-    info2:
-      'This is stage version of PC Insights, a product of Dell-Support Assist which collects the telemetry of devices, summarizes it, and provides recommendations to customers/clients to avoid potential impediments for optimal productivity.',
+    info2: `PC Insights, conceptual version of Dell-Support Assist's product which collects the telemetry of PCs, summarizes it, and provides PC recommendations to customers/clients to avoid potential impediments for optimal productivity.`,
     url: 'https://nikhilrstg18.github.io/insights/',
     repo: 'https://github.com/nikhilrstg18/insights', // if no repo, the button will not show up
   },
