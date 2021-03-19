@@ -20,25 +20,25 @@ export const aboutData = {
   title: 'About Me',
   subTitle: 'Recreating best of myself',
   img: 'profile.webp',
-  titles: [
+  positions: [
     {
       id: nanoid(),
-      title: 'Web Developer',
-      titleLink: 'https://dotnet.microsoft.com/apps/aspnet',
-      titleAbout: 'Web Apps • APIs • µ-services',
+      name: 'Web Developer',
+      positionLink: 'https://dotnet.microsoft.com/apps/aspnet',
+      positionAbout: 'Web Apps • APIs • µ-services',
     },
     {
       id: nanoid(),
-      title: 'Certified AWS Solutions Architect - Associate®',
-      titleLink:
+      name: 'Certified AWS Solutions Architect - Associate®',
+      positionLink:
         'https://www.youracclaim.com/badges/8987c8e4-cd70-48f2-9017-9af4188c841d?source=linked_in_profile',
-      titleAbout: '',
+      positionAbout: '',
     },
     {
       id: nanoid(),
-      title: 'Certified Scrum Master®',
-      titleLink: 'https://bcert.me/szliglrhu',
-      titleAbout: '',
+      name: 'Certified Scrum Master®',
+      positionLink: 'https://bcert.me/szliglrhu',
+      positionAbout: '',
     },
   ],
   city: 'Delhi',
@@ -48,18 +48,18 @@ export const aboutData = {
     skills: [
       {
         id: nanoid(),
-        title: 'Back-end',
-        titleAbout: 'C# • Asp.Net • NodeJS',
+        group: 'Back-end',
+        groupAbout: 'C# • Asp.Net • NodeJS',
       },
       {
         id: nanoid(),
-        title: 'Front-end ',
-        titleAbout: 'Angular • React',
+        group: 'Front-end ',
+        groupAbout: 'Angular • React',
       },
       {
         id: nanoid(),
-        title: 'Cloud',
-        titleAbout: 'AWS • Azure',
+        group: 'Cloud',
+        groupAbout: 'AWS • Azure',
       },
     ],
   },

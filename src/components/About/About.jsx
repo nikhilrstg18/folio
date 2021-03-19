@@ -8,7 +8,7 @@ import Title from '../Title/Title';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { title, subTitle, img, cta, titles, city, cityAround, quickSkills, currentOrg } = about;
+  const { title, subTitle, img, cta, positions, city, cityAround, quickSkills, currentOrg } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -41,9 +41,9 @@ const About = () => {
                 <div className="about-wrapper__info-text">
                   <p>I&apos;m a</p>
                   <ul>
-                    {titles &&
-                      titles.map((t, index) => {
-                        const { id, name = title, titleLink, titleAbout } = t;
+                    {positions &&
+                      positions.map((position, index) => {
+                        const { id, name, positionLink, positionAbout } = position;
                         return (
                           <Fade
                             key={id}
@@ -55,10 +55,10 @@ const About = () => {
                           >
                             <li>
                               <p>
-                                <a href={titleLink}>
+                                <a href={positionLink}>
                                   <strong>{name} </strong>
                                 </a>
-                                {titleAbout && <span>({titleAbout})</span>}
+                                {positionAbout && <span>({positionAbout})</span>}
                               </p>
                             </li>
                           </Fade>
@@ -91,12 +91,12 @@ const About = () => {
                     <ul>
                       {quickSkills &&
                         quickSkills.skills &&
-                        quickSkills.skills.map((s) => {
-                          const { id, skillName = title, titleAbout } = s;
+                        quickSkills.skills.map((skill) => {
+                          const { id, group, groupAbout } = skill;
                           return (
                             <li key={id}>
                               <p>
-                                {skillName} {titleAbout && <strong>({titleAbout})</strong>}
+                                {group} {groupAbout && <strong>({groupAbout})</strong>}
                               </p>
                             </li>
                           );
