@@ -8,7 +8,7 @@ import Title from '../Title/Title';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, cta } = about;
+  const { title, subTitle, img, cta, titles, city, cityAround, quickSkills, currentOrg } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -26,7 +26,7 @@ const About = () => {
   return (
     <section id="about">
       <Container>
-        <Title title="About Me" subTitle="Recreating best of myself" />
+        {title && subTitle && <Title title={title} subTitle={subTitle} />}
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
@@ -41,52 +41,29 @@ const About = () => {
                 <div className="about-wrapper__info-text">
                   <p>I&apos;m a</p>
                   <ul>
-                    <Fade
-                      left={isDesktop}
-                      bottom={isMobile}
-                      duration={1000}
-                      delay={600}
-                      distance="30px"
-                    >
-                      <li>
-                        <p>
-                          <a href="https://dotnet.microsoft.com/apps/aspnet">
-                            <strong>Web Developer </strong>
-                          </a>
-                          ( Web Apps | APIs | <strong>&micro;</strong>-services )
-                        </p>
-                      </li>
-                    </Fade>
-                    <Fade
-                      left={isDesktop}
-                      bottom={isMobile}
-                      duration={1000}
-                      delay={700}
-                      distance="30px"
-                    >
-                      <li>
-                        <p>
-                          <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-12-02&ci=AWS01115186">
-                            <strong>Certified AWS Solutions Architect - Associate&reg;</strong>
-                          </a>
-                        </p>
-                      </li>
-                    </Fade>
-                    <Fade
-                      left={isDesktop}
-                      bottom={isMobile}
-                      duration={1000}
-                      delay={800}
-                      distance="30px"
-                    >
-                      <li>
-                        <p>
-                          <a href="http://badgecert.com/bc/html/profile.jsp?k=pwywzgg">
-                            <strong>Certified Scrum Master&reg;</strong>
-                          </a>
-                        </p>
-                      </li>
-                    </Fade>
+                    {titles &&
+                      titles.map((t, index) => {
+                        const { id, name = title, titleLink, titleAbout } = t;
+                        return (
+                          <Fade
+                            key={id}
+                            left={isDesktop}
+                            bottom={isMobile}
+                            duration={1000}
+                            delay={600 + index * 100}
+                            distance="30px"
+                          >
+                            <li>
+                              <p>
+                                <a href={titleLink}>
+                                  <strong>{name} </strong>
+                                </a>
+                                {titleAbout && <span>({titleAbout})</span>}
+                              </p>
+                            </li>
+                          </Fade>
+                        );
+                      })}
                   </ul>
                   <Fade
                     left={isDesktop}
@@ -97,7 +74,8 @@ const About = () => {
                   >
                     <p>
                       {' '}
-                      living in New Delhi and moving around <strong>NCR, India</strong>.
+                      living in <strong>{city}</strong> and moving around{' '}
+                      <strong>{cityAround}</strong>.
                     </p>
                   </Fade>
                 </div>
@@ -109,28 +87,20 @@ const About = () => {
                   distance="30px"
                 >
                   <div className="about-wrapper__info-text">
-                    <p>
-                      I&apos;m passionate about web development and spend workdays with my hands in
-                      below areas of web development
-                    </p>
+                    <p>{quickSkills && quickSkills?.para}</p>
                     <ul>
-                      <li>
-                        <p>
-                          back-end ( <strong>C# .Net</strong> | <strong>ASP.NET Core</strong> )
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          front-end ( <strong>HTML</strong> | <strong>CSS</strong> |{' '}
-                          <strong>JS</strong> | <strong>Angular</strong> | <strong>ReactJS</strong>{' '}
-                          )
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          cloud ( <strong>AWS</strong> | <strong>Azure</strong> )
-                        </p>
-                      </li>
+                      {quickSkills &&
+                        quickSkills.skills &&
+                        quickSkills.skills.map((s) => {
+                          const { id, skillName = title, titleAbout } = s;
+                          return (
+                            <li key={id}>
+                              <p>
+                                {skillName} {titleAbout && <strong>({titleAbout})</strong>}
+                              </p>
+                            </li>
+                          );
+                        })}
                     </ul>
                   </div>
                 </Fade>
@@ -143,11 +113,11 @@ const About = () => {
                 >
                   <p className="about-wrapper__info-text">
                     Currently, I work with{' '}
-                    <a href="https://cygrp.com/">
-                      <strong>Cyber Group</strong>
+                    <a href={currentOrg?.link}>
+                      <strong>{currentOrg?.name}</strong>
                     </a>
-                    . I&apos;m not looking for any full-time position as of now but I&apos;m{'  '}
-                    <strong>always open to ideas and projects</strong> that excite me.
+                    . {currentOrg?.paraOne && <span>{currentOrg?.paraOne}</span>}.{' '}
+                    {currentOrg?.paraTwo && <strong>{currentOrg?.paraTwo}</strong>}
                   </p>
                 </Fade>
                 <Fade
@@ -159,7 +129,7 @@ const About = () => {
                 >
                   <p className="hero-cta">
                     <Link to="skills" smooth duration={1000}>
-                      <span className="cta-btn cta-btn--resume">{cta || 'Skills'}</span>
+                      <span className="cta-btn cta-btn--folio-inverse">{cta || 'next'}</span>
                     </Link>
                   </p>
                 </Fade>
