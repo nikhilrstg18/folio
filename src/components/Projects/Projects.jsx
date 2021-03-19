@@ -5,6 +5,7 @@ import Tilt from 'react-tilt';
 import PortfolioContext from '../../context/context';
 import ProjectImg from '../Image/ProjectImg';
 import Title from '../Title/Title';
+import GithubButtons from '../GithubButtons/GithubButtons';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -51,25 +52,17 @@ const Projects = () => {
                         </p>
                         <p className="mb-4 taj">{info2 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--folio"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
-
-                      {repo && (
+                      <div className="project-wrapper__actions">
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={repo}
+                          className="cta-btn cta-btn--folio"
+                          href={url || '#!'}
                         >
-                          Source Code
+                          See Live
                         </a>
-                      )}
+                        {repo && <GithubButtons repo={repo} isFollow={false} />}
+                      </div>
                     </div>
                   </Fade>
                 </Col>

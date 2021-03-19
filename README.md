@@ -228,7 +228,7 @@ export const projectsData = [
         imgId: nanoid(),
         img: 'project.webp', // recommended formats webp | use jpg for app to run in safari
         caption: '', // if no caption, the caption will not show up
-        interval: 1000, // interval for bootstrap carousal
+        interval: 1000, // interval in ms for bootstrap carousal
       },
       ...
     ],
@@ -259,6 +259,7 @@ Just put an object with the corresponding values inside the networks `array` or 
 
 ```javascript
 export const footerData = {
+  gitHub: '', // 'https://github.com/nikhilrstg18',
   networks: [
     {
       id: nanoid(),

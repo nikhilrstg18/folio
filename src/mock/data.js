@@ -482,6 +482,7 @@ export const contactData = {
 
 // FOOTER DATA
 export const footerData = {
+  gitHub: 'https://github.com/nikhilrstg18',
   networks: [
     {
       id: nanoid(),

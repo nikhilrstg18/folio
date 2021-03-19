@@ -7,7 +7,7 @@ import GithubButtons from '../GithubButtons/GithubButtons';
 import { githubButtons } from '../../mock/data';
 
 const Footer = () => {
-  const { footer } = useContext(PortfolioContext);
+  const { footer, gitHub } = useContext(PortfolioContext);
   const { networks } = footer;
   const { isEnabled } = githubButtons;
 
@@ -26,7 +26,7 @@ const Footer = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  href={url || gitHub}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}
@@ -39,12 +39,12 @@ const Footer = () => {
         <hr />
         <p className="footer__text">
           © {new Date().getFullYear()} - Created by{' '}
-          <a href="https://github.com/nikhilrstg18" target="_blank" rel="noopener noreferrer">
+          <a href={gitHub} target="_blank" rel="noopener noreferrer">
             Nikhil Rustagi with <i className="fa fa-heart" />
           </a>
         </p>
 
-        {isEnabled && <GithubButtons />}
+        {isEnabled && <GithubButtons repo={gitHub} />}
       </Container>
     </footer>
   );

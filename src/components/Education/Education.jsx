@@ -31,6 +31,7 @@ const Education = () => {
       <Container>
         <Title title="Work experience & Education" subTitle="Journey so far" />
         <VerticalTimeline className="mb-4">
+          <div />
           {education.length &&
             education.map((item) => {
               const { id, startDate, endDate, title, org, titleDesc, icon, bgColor } = item;
