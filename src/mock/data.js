@@ -19,7 +19,7 @@ export const heroData = {
 export const aboutData = {
   title: 'About Me',
   subTitle: 'Recreating best of myself',
-  img: 'profile.webp',
+  img: 'profile.png',
   positions: [
     {
       id: nanoid(),
@@ -81,7 +81,7 @@ export const skillsData = [
       {
         altName: 'HTML/CSS',
         iconClass: '',
-        logo: 'html-css.webp',
+        logo: 'html-css.png',
         percent: '60',
         color: '#ffc107',
         itemId: nanoid(),
@@ -89,7 +89,7 @@ export const skillsData = [
       {
         altName: 'JavaScript/TypeScript',
         iconClass: '',
-        logo: 'js-ts.webp',
+        logo: 'js-ts.png',
         percent: '70',
         color: '#ffc107',
         itemId: nanoid(),
@@ -104,7 +104,7 @@ export const skillsData = [
       {
         altName: 'NgRx',
         iconClass: '',
-        logo: 'ngrx.webp',
+        logo: 'ngrx.png',
         percent: '50',
         color: '#ba2bd2',
         itemId: nanoid(),
@@ -119,7 +119,7 @@ export const skillsData = [
       {
         altName: 'RxJS',
         iconClass: '',
-        logo: 'rxjs.webp',
+        logo: 'rxjs.png',
         percent: '50',
         color: '#61dafb',
         itemId: nanoid(),
@@ -127,7 +127,7 @@ export const skillsData = [
       {
         altName: 'Clarity Design System',
         iconClass: '',
-        logo: 'claritydesign-logo.webp',
+        logo: 'claritydesign-logo.png',
         percent: '50',
         color: '#61dafb',
         itemId: nanoid(),
@@ -141,7 +141,7 @@ export const skillsData = [
       {
         altName: 'C#',
         iconClass: '',
-        logo: 'csharp.webp',
+        logo: 'csharp.png',
         percent: '70',
         color: '#0b9e0b',
         itemId: nanoid(),
@@ -149,7 +149,7 @@ export const skillsData = [
       {
         altName: 'ASP.NET Core',
         iconClass: '',
-        logo: `net-core.webp`,
+        logo: `net-core.png`,
         percent: '60',
         color: '#47474a',
         itemId: nanoid(),
@@ -164,7 +164,7 @@ export const skillsData = [
       {
         altName: 'GraphQL',
         iconClass: '',
-        logo: 'graph-ql.webp',
+        logo: 'graph-ql.png',
         percent: '30',
         color: '#83cd29',
         itemId: nanoid(),
@@ -172,7 +172,7 @@ export const skillsData = [
       {
         altName: 'Python',
         iconClass: '',
-        logo: 'python.webp',
+        logo: 'python.png',
         percent: '30',
         color: '#2f74c0',
         itemId: nanoid(),
@@ -180,7 +180,7 @@ export const skillsData = [
       {
         altName: 'Java',
         iconClass: '',
-        logo: 'java.webp',
+        logo: 'java.png',
         percent: '50',
         color: '#2f74c0',
         itemId: nanoid(),
@@ -201,7 +201,7 @@ export const skillsData = [
       {
         altName: 'Azure',
         iconClass: '',
-        logo: 'azure.webp',
+        logo: 'azure.png',
         percent: '40',
         color: '#ffc107',
         itemId: nanoid(),
@@ -209,7 +209,7 @@ export const skillsData = [
       {
         altName: 'GCP',
         iconClass: '',
-        logo: 'gcp.webp',
+        logo: 'gcp.png',
         percent: '30',
         color: '#ffc107',
         itemId: nanoid(),
@@ -223,7 +223,7 @@ export const skillsData = [
       {
         altName: 'Cypress',
         iconClass: '',
-        logo: 'cypress.webp',
+        logo: 'cypress.png',
         percent: '50',
         color: '#47474a',
         itemId: nanoid(),
@@ -231,7 +231,7 @@ export const skillsData = [
       {
         altName: 'Selenium',
         iconClass: '',
-        logo: 'selenium.webp',
+        logo: 'selenium.png',
         percent: '50',
         color: '#47474a',
         itemId: nanoid(),
@@ -245,7 +245,7 @@ export const skillsData = [
       {
         altName: 'MS SQL Server',
         iconClass: '',
-        logo: 'ssms.webp',
+        logo: 'ssms.png',
         percent: '55',
         color: '#facc41',
         itemId: nanoid(),
@@ -253,7 +253,7 @@ export const skillsData = [
       {
         altName: 'PostgreSQL',
         iconClass: '',
-        logo: 'postgresql.webp',
+        logo: 'postgresql.png',
         percent: '45',
         color: '#facc41',
         itemId: nanoid(),
@@ -261,7 +261,7 @@ export const skillsData = [
       {
         altName: 'MongoDb',
         iconClass: '',
-        logo: 'mongo-db.webp',
+        logo: 'mongo-db.png',
         percent: '30',
         color: '#facc41',
         itemId: nanoid(),
@@ -275,7 +275,7 @@ export const skillsData = [
       {
         altName: 'Visual Studio 2019',
         iconClass: '',
-        logo: 'visual-studio.webp',
+        logo: 'visual-studio.png',
         percent: '60',
         color: '#61dafb',
         itemId: nanoid(),
@@ -283,7 +283,7 @@ export const skillsData = [
       {
         altName: 'Visual Studio Code',
         iconClass: '',
-        logo: 'visual-studio-code.webp',
+        logo: 'visual-studio-code.png',
         percent: '75',
         color: '#61dafb',
         itemId: nanoid(),
@@ -291,7 +291,7 @@ export const skillsData = [
       {
         altName: 'Docker',
         iconClass: '',
-        logo: 'docker.webp',
+        logo: 'docker.png',
         percent: '45',
         color: '#61dafb',
         itemId: nanoid(),
@@ -373,26 +373,32 @@ export const projectsData = [
     imgs: [
       {
         imgId: nanoid(),
-        img: 'insightsdashboard.webp',
+        img: 'wisdomSnapshot.png',
         caption: '',
         interval: 2500,
       },
       {
         imgId: nanoid(),
-        img: 'insightslist.webp',
+        img: 'wisdomGridFilters.png',
         caption: '',
         interval: 2500,
       },
       {
         imgId: nanoid(),
-        img: 'insightsdetail.webp',
+        img: 'wisdomGrid.png',
+        caption: '',
+        interval: 2500,
+      },
+      {
+        imgId: nanoid(),
+        img: 'wisdomSummary.png',
         caption: '',
         interval: 2500,
       },
     ],
-    title: 'PC Insights',
+    title: 'PC Wisdom',
     info: 'Angular • Clarity Design System • Sass',
-    info2: `PC Insights, conceptual version of Dell-Support Assist's product which collects the telemetry of PCs, summarizes it, and provides PC recommendations to customers/clients to avoid potential impediments for optimal productivity.`,
+    info2: `PC Wisdom, a demonstration of large data drill-down feature from Snapshot -> server driven Grid -> Summary of the business subject (eg. PC).`,
     url: 'https://nikhilrstg18.github.io/insights/',
     repo: 'https://github.com/nikhilrstg18/insights', // if no repo, the button will not show up
   },
@@ -401,37 +407,37 @@ export const projectsData = [
     imgs: [
       {
         imgId: nanoid(),
-        img: 'folio1.webp',
+        img: 'folio1.png',
         caption: '',
         interval: 2000,
       },
       {
         imgId: nanoid(),
-        img: 'folio2.webp',
+        img: 'folio2.png',
         caption: '',
         interval: 2000,
       },
       {
         imgId: nanoid(),
-        img: 'folio3.webp',
+        img: 'folio3.png',
         caption: '',
         interval: 2000,
       },
       {
         imgId: nanoid(),
-        img: 'folio4.webp',
+        img: 'folio4.png',
         caption: '',
         interval: 2000,
       },
       {
         imgId: nanoid(),
-        img: 'folio5.webp',
+        img: 'folio5.png',
         caption: '',
         interval: 2000,
       },
       {
         imgId: nanoid(),
-        img: 'folio6.webp',
+        img: 'folio6.png',
         caption: '',
         interval: 2000,
       },
@@ -448,19 +454,19 @@ export const projectsData = [
     imgs: [
       {
         imgId: nanoid(),
-        img: 'project.webp',
+        img: 'project.png',
         caption: 'coming soon...',
         interval: 1000,
       },
       {
         imgId: nanoid(),
-        img: 'project.webp',
+        img: 'project.png',
         caption: 'coming soon...',
         interval: 1000,
       },
       {
         imgId: nanoid(),
-        img: 'project.webp',
+        img: 'project.png',
         caption: 'coming soon...',
         interval: 1000,
       },
