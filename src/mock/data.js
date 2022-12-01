@@ -64,8 +64,8 @@ export const aboutData = {
     ],
   },
   currentOrg: {
-    name: 'Cyber Group',
-    link: 'https://www.cygrp.com/',
+    name: 'Dell Technologies',
+    link: 'https://www.dell.com/',
     paraOne: `I'm not looking for any full-time position as of now`,
     paraTwo: `I'm always open to ideas and projects that excite me`,
   },
@@ -76,51 +76,28 @@ export const aboutData = {
 export const skillsData = [
   {
     id: nanoid(),
-    name: 'UI',
+    name: 'Frontend',
     items: [
       {
-        altName: 'HTML/CSS',
+        altName: 'HTML | CSS | JS',
         iconClass: '',
-        logo: 'html-css.png',
-        percent: '60',
+        logo: 'htmlcssjs.png',
+        percent: '75',
         color: '#ffc107',
         itemId: nanoid(),
       },
       {
-        altName: 'JavaScript/TypeScript',
+        altName: 'Angular | Typescript | NgRx',
         iconClass: '',
-        logo: 'js-ts.png',
-        percent: '70',
-        color: '#ffc107',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'Angular',
-        iconClass: 'fab fa-angular',
+        logo: 'ngtsngrx.png',
         percent: '75',
         color: '#df0030',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'NgRx',
-        iconClass: '',
-        logo: 'ngrx.png',
-        percent: '50',
-        color: '#ba2bd2',
         itemId: nanoid(),
       },
       {
         altName: 'React',
         iconClass: 'fab fa-react',
         percent: '60',
-        color: '#61dafb',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'RxJS',
-        iconClass: '',
-        logo: 'rxjs.png',
-        percent: '50',
         color: '#61dafb',
         itemId: nanoid(),
       },
@@ -136,7 +113,7 @@ export const skillsData = [
   },
   {
     id: nanoid(),
-    name: 'Server',
+    name: 'Backend',
     items: [
       {
         altName: 'C#',
@@ -189,58 +166,7 @@ export const skillsData = [
   },
   {
     id: nanoid(),
-    name: 'Cloud',
-    items: [
-      {
-        altName: 'AWS',
-        iconClass: 'fab fa-aws',
-        percent: '55',
-        color: '#ffc107',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'Azure',
-        iconClass: '',
-        logo: 'azure.png',
-        percent: '40',
-        color: '#ffc107',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'GCP',
-        iconClass: '',
-        logo: 'gcp.png',
-        percent: '30',
-        color: '#ffc107',
-        itemId: nanoid(),
-      },
-    ],
-  },
-  {
-    id: nanoid(),
-    name: 'Automation / Testing',
-    items: [
-      {
-        altName: 'Cypress',
-        iconClass: '',
-        logo: 'cypress.png',
-        percent: '50',
-        color: '#47474a',
-        itemId: nanoid(),
-      },
-      {
-        altName: 'Selenium',
-        iconClass: '',
-        logo: 'selenium.png',
-        percent: '50',
-        color: '#47474a',
-        itemId: nanoid(),
-      },
-    ],
-  },
-  {
-    id: nanoid(),
-    name: 'Storage',
+    name: 'Database',
     items: [
       {
         altName: 'MS SQL Server',
@@ -270,10 +196,62 @@ export const skillsData = [
   },
   {
     id: nanoid(),
+    name: 'Automation / Testing',
+    items: [
+      {
+        altName: 'Cypress',
+        iconClass: '',
+        logo: 'cypress.png',
+        percent: '50',
+        color: '#47474a',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Selenium',
+        iconClass: '',
+        logo: 'selenium.png',
+        percent: '50',
+        color: '#47474a',
+        itemId: nanoid(),
+      },
+    ],
+  },
+  {
+    id: nanoid(),
+    name: 'Cloud',
+    items: [
+      {
+        altName: 'AWS',
+        iconClass: 'fab fa-aws',
+        percent: '55',
+        color: '#ffc107',
+        itemId: nanoid(),
+      },
+      {
+        altName: 'Pivotal CF',
+        iconClass: '',
+        logo: 'pcf.png',
+        percent: '40',
+        color: '#ffc107',
+        itemId: nanoid(),
+      },
+      // {
+      //   altName: 'GCP',
+      //   iconClass: '',
+      //   logo: 'gcp.png',
+      //   percent: '30',
+      //   color: '#ffc107',
+      //   itemId: nanoid(),
+      // },
+    ],
+  },
+
+  {
+    id: nanoid(),
     name: 'Tools',
     items: [
       {
-        altName: 'Visual Studio 2019',
+        altName: 'Visual Studio 2022',
         iconClass: '',
         logo: 'visual-studio.png',
         percent: '60',
@@ -304,18 +282,19 @@ export const skillsData = [
 export const educationData = [
   {
     id: nanoid(),
-    startDate: '2020',
+    startDate: '2021',
     endDate: 'present',
     title: 'Sr. Software Engineer - Dev',
-    org: 'Cyber Group India (P) Ltd, Noida, UP',
-    titleDesc: 'Web App Development • Cloud Solutions with AWS and Azure • documentation',
+    org: 'Dell Technologies, BLR',
+    titleDesc:
+      'Architecting Microservices & UI • Preformance & Security • Cloud Solutions with PCF',
     icon: 'work',
     bgColor: '#E100FF',
   },
   {
     id: nanoid(),
     startDate: '2018',
-    endDate: '2020',
+    endDate: '2021',
     title: 'Software Engineer - Dev',
     org: 'Cyber Group India (P) Ltd, Noida, UP',
     titleDesc:

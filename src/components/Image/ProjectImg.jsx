@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import {GatsbyImage} from 'gatsby-plugin-image';
 
 const ProjectImg = ({ filename, alt }) => (
   <StaticQuery
@@ -13,9 +13,11 @@ const ProjectImg = ({ filename, alt }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 1366) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 1366
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                )
               }
             }
           }
@@ -23,12 +25,13 @@ const ProjectImg = ({ filename, alt }) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
+      const image =data.images.edges.find((n) => n.node.relativePath.includes(filename));
 
       if (!image) return null;
-
-      const imageFluid = image.node.childImageSharp.fluid;
-      return <Img alt={alt} fluid={imageFluid} />;
+            
+      return <GatsbyImage
+        className="rounded shadow-lg"
+        image={image.node.childImageSharp.gatsbyImageData}/>;
     }}
   />
 );

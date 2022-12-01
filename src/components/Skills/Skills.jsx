@@ -1,5 +1,5 @@
 import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage} from 'gatsby-plugin-image';
 import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, ProgressBar, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
@@ -85,7 +85,7 @@ const Skills = () => {
                                       <span title={altName}>
                                         <i
                                           className={`icon ${iconClass}`}
-                                          style={{ color, fontSize: '3rem' }}
+                                          style={{ color, fontSize: '50px' }}
                                         />
                                       </span>
                                     ) : (
@@ -98,9 +98,11 @@ const Skills = () => {
                                                   relativePath
                                                   name
                                                   childImageSharp {
-                                                    fixed(width: 64) {
-                                                      ...GatsbyImageSharpFixed
-                                                    }
+                                                    gatsbyImageData(
+                                                      width: 64
+                                                      layout: FULL_WIDTH
+                                                      placeholder: NONE
+                                                    )
                                                   }
                                                 }
                                               }
@@ -114,25 +116,24 @@ const Skills = () => {
 
                                           if (!image) return null;
 
-                                          const imageFixed = image.node.childImageSharp.fixed;
                                           return (
-                                            <Img
-                                              title={altName}
-                                              style={{ width: '3rem', height: '3rem' }}
-                                              alt={altName}
-                                              fixed={imageFixed}
+                                            <GatsbyImage
+                                              style={{ width: '50' }}
+                                              className="rounded"
+                                              image={image.node.childImageSharp.gatsbyImageData}
                                             />
                                           );
                                         }}
                                       />
                                     )}
                                   </Col>
-                                  <Col lg={10} md={10} sm={10} className="progress-div">
+                                  <Col lg={10} md={10} sm={10} className="progress-div d-flex align-items-center">
                                     <ProgressBar
                                       animated
                                       now={percent}
                                       label={label}
                                       variant="folio"
+                                      width="100%"
                                     />
                                   </Col>
                                 </Row>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage} from 'gatsby-plugin-image';
 
 const AboutImg = ({ filename, alt }) => (
   <StaticQuery
@@ -13,9 +13,11 @@ const AboutImg = ({ filename, alt }) => (
               relativePath
               name
               childImageSharp {
-                fixed(width: 350) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(
+                  width: 350
+                  layout: FIXED
+                  placeholder: BLURRED
+                )
               }
             }
           }
@@ -26,9 +28,10 @@ const AboutImg = ({ filename, alt }) => (
       const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
 
       if (!image) return null;
-
-      const imageFixed = image.node.childImageSharp.fixed;
-      return <Img className="rounded shadow-lg" alt={alt} fixed={imageFixed} />;
+      
+      return <GatsbyImage
+        className="rounded shadow-lg"
+        image={image.node.childImageSharp.gatsbyImageData}/>;
     }}
   />
 );
