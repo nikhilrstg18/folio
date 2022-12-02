@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { useStaticQuery, graphql, StaticQuery } from 'gatsby';
 import { GatsbyImage, getImage} from 'gatsby-plugin-image';
 import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, ProgressBar, Row } from 'react-bootstrap';
@@ -38,6 +38,7 @@ const Skills = () => {
           <Row className="mb-0">
             {skills.length &&
               skills.map((skill) => {
+                debugger
                 const { id, name, items } = skill;
                 return (
                   <Col lg={4} md={6} sm={12} key={id} className="mt-4 mb-4">
@@ -80,8 +81,9 @@ const Skills = () => {
                             >
                               <div className="pt-2 pr-4 pl-4">
                                 <Row className="mb-0 pl-2 pr-2">
-                                  <Col lg={2} md={2} sm={2}>
-                                    {iconClass ? (
+                                  <Col lg={2} md={2} sm={2} xs={2}>
+                                    {iconClass
+                                      ? (
                                       <span title={altName}>
                                         <i
                                           className={`icon ${iconClass}`}
@@ -115,19 +117,22 @@ const Skills = () => {
                                           );
 
                                           if (!image) return null;
+                                          debugger
 
                                           return (
                                             <GatsbyImage
-                                              style={{ width: '50' }}
-                                              className="rounded"
-                                              image={image.node.childImageSharp.gatsbyImageData}
+                                            style={{ width: '50', height: '50' }}
+                                            className="rounded"
+                                            image={image.node.childImageSharp.gatsbyImageData}
+                                            title={altName}
+                                            alt={altName}
                                             />
                                           );
                                         }}
                                       />
                                     )}
                                   </Col>
-                                  <Col lg={10} md={10} sm={10} className="progress-div d-flex align-items-center">
+                                  <Col lg={10} md={10} sm={10} xs={10} className="progress-div d-flex align-items-center">
                                     <ProgressBar
                                       animated
                                       now={percent}
@@ -150,7 +155,7 @@ const Skills = () => {
         </div>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <p className="hero-cta">
-            <Link to="education" smooth duration={1000}>
+            <Link to="education" smooth={true} duration={1000}>
               <span className="cta-btn cta-btn--folio">{cta || 'Work Experience & Education'}</span>
             </Link>
           </p>

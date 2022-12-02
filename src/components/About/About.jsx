@@ -128,7 +128,7 @@ const About = () => {
                   distance="30px"
                 >
                   <p className="hero-cta">
-                    <Link to="skills" smooth duration={1000}>
+                    <Link to="skills" smooth={true} duration={1000}>
                       <span className="cta-btn cta-btn--folio-inverse">{cta || 'next'}</span>
                     </Link>
                   </p>

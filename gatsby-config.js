@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/folio',
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,

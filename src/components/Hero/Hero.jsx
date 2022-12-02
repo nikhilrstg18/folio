@@ -38,9 +38,12 @@ const Header = () => {
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
-            <Link to="about" smooth duration={1000}>
+            <Link to="about" smooth={false} duration={1000}>
               <span className="cta-btn cta-btn--folio">{cta || 'About Me'}</span>
             </Link>
+            <a href="https://nikhilrstg18.github.io/blogger/" target="_blank" rel="noreferrer" className='mx-4'>
+              <span className="cta-btn cta-btn--folio">{'My Blogs'}</span>
+            </a>
           </p>
         </Fade>
       </Container>
