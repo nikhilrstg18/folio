@@ -1,0 +1,11 @@
+/*!
+ * github-buttons v2.22.1
+ * (c) 2022 なつき
+ * @license BSD-2-Clause
+ */
+
+/** @license MUI v5.10.16
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */

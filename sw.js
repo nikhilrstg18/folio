@@ -27,21 +27,21 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-1311cc869fad39001b0f.js"
+    "url": "webpack-runtime-96c53a00b1dc11837dae.js"
   },
   {
     "url": "framework-4edcf44d33d38140700c.js"
   },
   {
-    "url": "app-643d21b853ac3bd25490.js"
+    "url": "app-d8f692aea2f0e335f9df.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d82f1aa75c210751beacaa37219e33b0"
+    "revision": "21787495d2ddf72ee689ae5b86ab7fce"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "a76b8f884c5d8f0b0ad43b97fb39e281"
+    "revision": "2deef792f43417bf1a391553ada3627a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -146,12 +146,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/folio`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-643d21b853ac3bd25490.js`))) {
+  if (!resources || !(await caches.match(`/folio/app-d8f692aea2f0e335f9df.js`))) {
     return await fetch(event.request)
   }
 
@@ -164,7 +164,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/folio/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
